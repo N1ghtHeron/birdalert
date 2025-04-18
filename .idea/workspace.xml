@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="446259f2-1073-43c9-9d86-1b5f2375b743" name="更改" comment="test">
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/auto_issue.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/auto_issue.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +88,7 @@
       <workItem from="1744981373331" duration="3245000" />
       <workItem from="1744984629758" duration="458000" />
       <workItem from="1744985777689" duration="886000" />
-      <workItem from="1744986969595" duration="2176000" />
+      <workItem from="1744986969595" duration="2925000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1744987087217</created>
@@ -128,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1744987894970</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="test">
+      <created>1744989582579</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1744989582579</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
