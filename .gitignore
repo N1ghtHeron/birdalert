@@ -1,3 +1,12 @@
 .env
 test.ipynb
-.idea/
+.ipynb_checkpoints
+__pycache__
+*.swp
+*.pyc
+.idea
+*.pdf
+*.PDF
+pdf_files
+.env
+.DS_Store
