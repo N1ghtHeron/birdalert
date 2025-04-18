@@ -3,7 +3,8 @@ name: auto alert
 on:
   schedule:
     - cron: "0 4 * * *"    # UTC 04:00 -> 北京时间 12:00
-    - cron: "0 16 * * *"   # UTC 16:00 -> 北京时间 00:00
+    - cron: "0 15 * * *"   # UTC 15:00 -> 北京时间 23:00
+
   workflow_dispatch:
 
 jobs:
@@ -22,10 +23,12 @@ jobs:
 
       - name: Install dependencies
         run: |
-        # 如果有 requirements.txt，则安装依赖，否则可以自行添加所需包
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; else pip install requests beautifulsoup4 ebird-api
-               requests PyGithub; fi
-
+          # 如果有 requirements.txt，则安装依赖，否则安装指定依赖包
+          if [ -f requirements.txt ]; then 
+            pip install -r requirements.txt; 
+          else 
+            pip install requests beautifulsoup4 ebird-api PyGithub; 
+          fi
 
       - name: Generate markdown file
         run: python main.py --mode generate
