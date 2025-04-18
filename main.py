@@ -3,12 +3,13 @@
 main.py
 
 Modes:
-  --mode generate      Generate markdown file under export/YYYY-MM-DD.md
-  --mode create-issue  Create a GitHub issue from the markdown file
+  --mode generate      Generate markdown file under export/YYYY-MM-DD.md and print to STDOUT.
+  --mode create-issue  Create a GitHub issue from the markdown file.
 
 Dependencies:
   pip install requests beautifulsoup4 PyGithub
 """
+
 import os
 import argparse
 import datetime
@@ -21,11 +22,11 @@ from github import Github
 # Number of days to look back
 num_days = 3
 
-#--------- Existing utility functions ----------
+
+# ----------------------- Utility functions ----------------------------
+
 def fetch_page(url):
-    """
-    获取指定 URL 的页面内容，设置合适的 User-Agent 避免被拒绝。
-    """
+    """获取指定 URL 的页面内容，设置合适的 User-Agent 避免被拒绝。"""
     headers = {
         "User-Agent": (
             "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
@@ -39,12 +40,9 @@ def fetch_page(url):
 
 
 def get_target_date_mapping(num_days=num_days):
-    """
-    生成最近 num_days 天的目标日期映射。
-    """
+    """生成最近 num_days 天的目标日期映射。"""
     jp_week_map = {0: "月", 1: "火", 2: "水", 3: "木", 4: "金", 5: "土", 6: "日"}
     cn_week_map = {0: "星期一", 1: "星期二", 2: "星期三", 3: "星期四", 4: "星期五", 5: "星期六", 6: "星期日"}
-
     mapping = {}
     today = datetime.datetime.now()
     for i in range(num_days):
@@ -56,9 +54,7 @@ def get_target_date_mapping(num_days=num_days):
 
 
 def parse_records_jp(html, target_date_mapping):
-    """
-    解析日语页面中的鸟种记录。
-    """
+    """解析日语页面中的鸟种记录，返回按日期分组的记录字典。"""
     soup = BeautifulSoup(html, "html.parser")
     text = soup.get_text("\n")
     lines = [line.strip() for line in text.splitlines() if line.strip()]
@@ -66,8 +62,8 @@ def parse_records_jp(html, target_date_mapping):
     for i, line in enumerate(lines):
         if line in target_date_mapping:
             if i >= 2:
-                observed_jp = lines[i-2]
-                mid = lines[i-1]
+                observed_jp = lines[i - 2]
+                mid = lines[i - 1]
                 parts = mid.split("/")
                 sci = parts[1].strip() if len(parts) > 1 else ""
                 rec = {"observed_jp": observed_jp, "scientific": sci}
@@ -76,6 +72,7 @@ def parse_records_jp(html, target_date_mapping):
 
 
 def load_library(csv_file):
+    """从 CSV 文件中加载已收录鸟种库，返回 set。"""
     library = set()
     with open(csv_file, newline='', encoding='utf-8') as f:
         reader = csv.DictReader(f)
@@ -87,6 +84,7 @@ def load_library(csv_file):
 
 
 def load_mapping(csv_file):
+    """从 CSV 文件中加载鸟种名称映射，返回字典（键为拉丁文名称）。"""
     mapping = {}
     with open(csv_file, newline='', encoding='utf-8') as f:
         reader = csv.reader(f)
@@ -104,6 +102,7 @@ def load_mapping(csv_file):
 
 
 def load_locations(csv_file):
+    """从 CSV 文件中加载观鸟地列表，返回列表，每个元素包含 URL 和地点名称。"""
     locs = []
     with open(csv_file, newline='', encoding='utf-8') as f:
         reader = csv.reader(f)
@@ -121,9 +120,11 @@ def load_locations(csv_file):
             })
     return locs
 
-#--------- Core logic to aggregate and generate markdown ----------
+
+# ----------------------- Core logic ----------------------------
+
 def generate_markdown():
-    # Load data sources
+    """聚合数据，生成 Markdown 格式的报告，并返回文本内容。"""
     location_csv = "data/spot_zoopicker.csv"
     library_csv = "data/ebird_world_life_list.csv"
     mapping_csv = "data/Avibase_Tokyo.csv"
@@ -133,13 +134,13 @@ def generate_markdown():
     library = load_library(library_csv)
     name_map = load_mapping(mapping_csv)
 
-    # Collect missing records
+    # 收集各观鸟地的数据
     results = {}
     for loc in locations:
         try:
             html = fetch_page(loc["url"])
         except Exception as e:
-            print(f"获取 {loc['location']} 页面失败：", e)
+            print(f"获取 {loc['location']} 页面失败：{e}")
             continue
         recs = parse_records_jp(html, target_map)
         for jp_date, rec_list in recs.items():
@@ -148,7 +149,7 @@ def generate_markdown():
             if missing:
                 results.setdefault(out_date, {}).setdefault(loc["location"], []).extend(missing)
 
-    # Aggregate
+    # 聚合同一日期下相同物种的数据
     aggregated = {}
     for date_key, locs in results.items():
         aggregated.setdefault(date_key, {})
@@ -160,7 +161,7 @@ def generate_markdown():
                 entry["locations"][loc_name] = entry["locations"].get(loc_name, 0) + 1
                 aggregated[date_key][sci] = entry
 
-    # Build markdown
+    # 构建 Markdown 报告内容
     lines = [f"# 最近{num_days}天中观测到但未收录的鸟种："]
     if not aggregated:
         lines.append("无新增鸟种记录。")
@@ -174,11 +175,11 @@ def generate_markdown():
                 lines.append(f"\n### {cn}，{jp}，{sci} ({total})")
                 for loc_name, cnt in sorted(data["locations"].items()):
                     lines.append(f"- {loc_name} ({cnt})")
-
     return "\n".join(lines)
 
-#--------- Helper for file writing and GitHub Issue creation ----------
+
 def write_markdown_to_file(text, date_str):
+    """将 Markdown 文本写入 export/YYYY-MM-DD.md 文件。"""
     export_dir = "export"
     os.makedirs(export_dir, exist_ok=True)
     path = os.path.join(export_dir, f"{date_str}.md")
@@ -188,6 +189,7 @@ def write_markdown_to_file(text, date_str):
 
 
 def create_github_issue(body, date_str):
+    """利用环境变量 TOKEN 创建一个 GitHub Issue，标题中包含日期。"""
     token = os.environ.get("TOKEN")
     if not token:
         print("Error: TOKEN 环境变量未设置。无法创建 Issue。")
@@ -202,11 +204,17 @@ def create_github_issue(body, date_str):
     issue = repo.create_issue(title=title, body=body)
     print(f"Issue created: {issue.html_url}")
 
-#--------- Main Entry Point ----------
+
+# ----------------------- Main Entry Point ----------------------------
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--mode", choices=["generate", "create-issue"], required=True,
-                        help="运行模式: generate(生成 Markdown), create-issue(创建 GitHub Issue)")
+                        help="运行模式: generate(生成 Markdown), create-issue(根据 Markdown 创建 GitHub Issue)")
+    # # local debug
+    # parser.add_argument("--mode", choices=["generate", "create-issue"],
+    #                     default="generate",  # 设置默认模式
+    #                     help="运行模式: generate(生成 Markdown), create-issue(根据 Markdown 创建 GitHub Issue)")
+
     args = parser.parse_args()
 
     date_str = datetime.datetime.utcnow().strftime("%Y-%m-%d")
@@ -214,8 +222,8 @@ if __name__ == "__main__":
     if args.mode == "generate":
         md = generate_markdown()
         write_markdown_to_file(md, date_str)
+        # 同时输出报告内容，便于 GitHub Actions 捕获日志
         print(md)
-
     elif args.mode == "create-issue":
         path = os.path.join("export", f"{date_str}.md")
         if not os.path.isfile(path):

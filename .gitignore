@@ -11,3 +11,4 @@ pdf_files
 .env
 .DS_Store
 .idea/workspace.xml
+export
