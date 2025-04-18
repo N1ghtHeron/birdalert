@@ -1,0 +1,48 @@
+name: Auto Run Script and Post Issue Comment
+
+# 设置触发时间（cron 时间为 UTC 时间，此处示例调度每天 00:00, 04:00, 15:00 UTC 分别对应北京时间 08:00, 12:00, 23:00）
+on:
+  schedule:
+    - cron: "0 0 * * *"    # 每天 00:00 UTC -> 北京 08:00
+    - cron: "0 4 * * *"    # 每天 04:00 UTC -> 北京 12:00
+    - cron: "0 15 * * *"   # 每天 15:00 UTC -> 北京 23:00
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          pip install requests beautifulsoup4
+
+      - name: Run Python script and capture output
+        id: run_script
+        run: |
+          # 运行你的脚本（假设文件名为 script.py），把输出结果保存在 output.txt 中
+          python main.py > output.md
+          # 读入输出内容并设置成 step 输出变量
+          output=$(cat output.md)
+          echo "::set-output name=result::${output}"
+          # 输出到日志中供调试时查看
+          echo "$output"
+
+      - name: Create or update issue comment
+        uses: peter-evans/create-or-update-comment@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          # 指定需要更新评论的 Issue 编号（例如：1），也可以新建 Issue 后使其自动更新
+          issue-number: 1
+          # 评论 body 中以 Markdown 格式嵌入输出结果
+          body: |
+            **自动运行输出** (运行时间：${{ github.event.schedule }})
+            ```
+            ${{ steps.run_script.outputs.result }}
+            ```
