@@ -4,14 +4,16 @@ on:
   schedule:
     - cron: "0 4 * * *"    # UTC 04:00 -> 北京时间 12:00
     - cron: "0 15 * * *"   # UTC 15:00 -> 北京时间 23:00
-
   workflow_dispatch:
+
+permissions:
+  issues: write
 
 jobs:
   run-script:
     runs-on: ubuntu-latest
     env:
-      TOKEN: ${{ secrets.TOKEN }}
+      TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -23,7 +25,6 @@ jobs:
 
       - name: Install dependencies
         run: |
-          # 如果有 requirements.txt，则安装依赖，否则安装指定依赖包
           if [ -f requirements.txt ]; then 
             pip install -r requirements.txt; 
           else 
