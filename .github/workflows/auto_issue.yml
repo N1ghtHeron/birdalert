@@ -6,6 +6,8 @@ on:
     - cron: "0 0 * * *"    # 每天 00:00 UTC -> 北京 08:00
     - cron: "0 4 * * *"    # 每天 04:00 UTC -> 北京 12:00
     - cron: "0 15 * * *"   # 每天 15:00 UTC -> 北京 23:00
+    - cron: "0 16 * * *"
+  workflow_dispatch:
 
 jobs:
   run-script:
