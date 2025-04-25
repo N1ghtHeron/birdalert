@@ -1,0 +1,50 @@
+name: auto alert
+
+on:
+  schedule:
+    - cron: "0 20 * * *"   # UTC 20:00 -> 东9 5:00 github的action有延迟
+    - cron: "0 2 * * *"    # UTC 02:00 -> 东9 11:00
+    - cron: "0 13 * * *"   # UTC 13:00 -> 东9 22:00
+  workflow_dispatch:
+
+permissions:
+  issues: write
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    env:
+      TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      EBIRD_API_KEY: ${{ secrets.EBIRD_API_KEY }}
+      LAT: ${{ secrets.LAT }}
+      LNG: ${{ secrets.LNG }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: |
+          if [ -f requirements.txt ]; then 
+            pip install -r requirements.txt; 
+          else 
+            pip install requests beautifulsoup4 ebird-api PyGithub; 
+          fi
+
+      - name: Generate markdown file
+        run: python main.py --mode generate
+
+      - name: Commit generated markdown file
+        run: |
+          git config --global user.email "noctivagantheron@gmail.com"
+          git config --global user.name "N1ghtHeron"
+          git add export/*.md
+          git commit -m "Auto-generated markdown file" || echo "No changes to commit"
+          git push origin main || echo "No changes to push"
+
+      - name: Create GitHub issue
+        run: python main.py --mode create-issue
