@@ -27,14 +27,16 @@ _Alert target bird species from Zoopicker and ebird_
   - 进入你刚保存的仓库，点击 Setting-Secrets and variables-Actions-Repository secrets
   - 点击 New repository secrets, 分别添加以下3个参数并保存：
     - Name：EBIRD_API_KEY，Secret：{你的ebird API}
-    - Name：lat，Secret：{你希望指定搜索的区域中心经度}
-    - Name：lng，Secret：{你希望指定搜索
+    - Name：LAT，Secret：{经度}
+    - Name：LNG，Secret：{纬度}
+  - 例：如果你希望ebird以东京站为中心搜索观测记录，则LAT为35.68131729933924, LNG为139.76728475585355
 ### 3. 测试action
   - 回到 Setting 的 General 页面，下拉到 Features，勾选 Issues
-  - 回到仓库，点击 Actions，同意workflow，点击 run workflow
+  - 回到仓库，点击 Actions，选择左侧的 auto alert，点击右侧的 run workflow
   - 如果你的 auto alert 能成功运行并提交issue，则大功告成！
 
 ---
+
 # 进阶
 
 ## 文件结构
@@ -53,7 +55,7 @@ _Alert target bird species from Zoopicker and ebird_
 ├── requirements.txt    github action所需环境
 └── tools
 │   └── get_taxonomy.py 用于获取不同语言的ebird taxonomy鸟种数据库，并将其合并。可以使用自己的ebird API改地区和语言
-└── zoopickeronly.py    【只抓取zoopicker的记录】，因此不需要ebird API，可以删除原有的main.py后将其更名为main.py来实现相同的功能
+└── zoopickeronly.py    此代码不需要ebird API，【只抓取zoopicker的记录】。可以删除原有的main.py后将其更名为main.py来实现相同的功能
 ```
 
 
@@ -63,9 +65,8 @@ _Alert target bird species from Zoopicker and ebird_
 修改`auto_issue.yml`中下面的部分： 
 ```
 schedule:
-    - cron: "0 20 * * *"   # UTC 20:00 -> 东9 5:00 github的action有延迟
-    - cron: "0 2 * * *"    # UTC 02:00 -> 东9 11:00
-    - cron: "0 13 * * *"   # UTC 13:00 -> 东9 22:00
+    - cron: "0 20 * * *"   # UTC 20:00 -> 东9 5:00 github的action有延迟，建议提前1～2小时
+    - cron: "0 8 * * *"    # UTC 08:00 -> 东9 17:00
 ```
 ### 调整抓取"最近几天"的时间范围
 修改`main.py`中，全局配置的`num_days`
@@ -92,8 +93,8 @@ url = f"/v2/data/obs/geo/recent?lat={lat}&lng={lng}&back={num_days}&dist={dist}&
 2. 在本地创建.env文件，格式如下（不要带空格！）
 ```
 EBIRD_API_KEY=你的ebirdAPI
-lat=指定坐标经度，根据不同的url配置可以不用
-lng=指定坐标纬度，根据不同的url配置可以不用
+LAT=指定坐标经度，根据不同的url配置可以不用
+LNG=指定坐标纬度，根据不同的url配置可以不用
 ```
 3. 本地调试需要的代码已经使用TODO标出，解除注释即可，如下所示
 ```

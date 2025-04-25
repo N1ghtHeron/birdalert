@@ -144,9 +144,8 @@ def fetch_ebird_data():
     conn.request("GET", url, payload, headers)
     res = conn.getresponse()
     data = res.read()
-    print("API Response:", data.decode("utf-8"))  # 添加这行以查看响应内容 TODO:
     if res.status != 200:
-        print(f"Error: Received status code {res.status}") # TODO:
+        print(f"Error: Received status code {res.status}")
         return {}
     try:
         observations = json.loads(data.decode("utf-8"))
