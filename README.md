@@ -29,8 +29,10 @@ _Alert target bird species from Zoopicker and ebird_
   - 进入你刚保存的仓库，点击 Setting-Secrets and variables-Actions-Repository secrets
   - 点击 New repository secrets, 分别添加以下3个参数并保存：
     - Name：EBIRD_API_KEY，Secret：{你的ebird API}
-    - Name：LAT，Secret：{经度}
-    - Name：LNG，Secret：{纬度}
+    - Name：LAT，Secret：{搜索中心经度}
+    - Name：LNG，Secret：{搜索中心纬度}
+    - Name：USER，Secret：{你的用户名}
+    - Name：REPO，Secret：{你的仓库名}
   - 例：如果你希望ebird以东京站为中心搜索观测记录，则LAT为35.68131729933924, LNG为139.76728475585355
 ### 3. 替换文件，请保证文件名称与格式相同
   - 把 data 文件夹下的 ebird_world_life_list.csv 替换成你自己的生涯列表，必须包含【Scientific Name】。在ebird个人页面可以导出，需自行转换成uft-8格式
