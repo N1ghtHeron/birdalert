@@ -4,4 +4,3 @@ requests
 PyGithub
 matplotlib
 numpy
-subprocess
