@@ -28,8 +28,8 @@ import re
 import base64
 
 # TODO：----------------------- local debug ----------------------------
-from dotenv import load_dotenv
-load_dotenv()
+# from dotenv import load_dotenv
+# load_dotenv()
 # ----------------------- 全局配置 ----------------------------
 num_days = 3    # 最近几天数据
 ebird_token = os.getenv("EBIRD_API_KEY")    # eBird API Token
