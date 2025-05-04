@@ -3,3 +3,4 @@ ebird-api
 requests
 PyGithub
 matplotlib
+numpy

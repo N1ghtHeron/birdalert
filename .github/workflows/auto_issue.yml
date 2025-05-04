@@ -31,7 +31,7 @@ jobs:
           if [ -f requirements.txt ]; then 
             pip install -r requirements.txt; 
           else 
-            pip install requests beautifulsoup4 ebird-api PyGithub; 
+            pip install requests beautifulsoup4 ebird-api PyGithub matplotlib numpy;
           fi
 
       - name: Generate markdown file
@@ -46,4 +46,4 @@ jobs:
           git push origin main || echo "No changes to push"
 
       - name: Create GitHub issue
-        run: python main.py --mode create-issue
+        run: python main.py --mode issue-with-map
