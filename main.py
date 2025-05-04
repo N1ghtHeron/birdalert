@@ -459,7 +459,7 @@ def generate_map():
         lon_min, lon_max = center_lng - 0.2, center_lng + 0.2
         lat_min, lat_max = center_lat - 0.2, center_lat + 0.2
 
-    fig, ax = plt.subplots(figsize=(14, 10))
+    fig, ax = plt.subplots(figsize=(10, 8))
     # 绘制 marker 数据点，特殊 marker "*" 表示这些点
     for marker in merged_markers:
         color = get_marker_color(marker)
@@ -473,12 +473,12 @@ def generate_map():
         details = "\n".join(marker["birds"])
         annotation = f"{loc_names}\n{details}"
         ax.text(marker["lng"] + 0.0005, marker["lat"] + 0.0005, annotation,
-                fontsize=12, color=color, fontproperties=jp_font)
+                fontsize=10, color=color, fontproperties=jp_font)
 
     # 绘制
     for name, lat, lng, color in points:
         ax.scatter(x=lng, y=lat, marker="x", c=color, s=100, linewidths=2)
-        ax.text(lng + 0.0005, lat + 0.0005, name, fontsize=12, color="black", fontproperties=jp_font)
+        ax.text(lng + 0.0005, lat + 0.0005, name, fontsize=10, color="black", fontproperties=jp_font)
 
     # 画圆：以 center_lng, center_lat 为圆心，dist(km) 作为半径
     radius_lat = dist / 111.0
@@ -505,18 +505,24 @@ def generate_map():
 
 def combine_markdown_and_map(markdown_file, map_file):
     """
-    读取 Markdown 文件，并构造一个图片链接指向已上传的地图图片。
-    假设地图图片已经通过 git commit 上传到了主分支的 export 文件夹下。
+    读取 Markdown 文件和地图图片，
+    将地图图片转换为 Base64 编码后按 data URI 格式嵌入 Markdown，
+    返回合并后的 Markdown 文本。
     """
+    # 读取 Markdown 正文
     with open(markdown_file, "r", encoding="utf-8") as f:
         md_text = f.read()
 
-    # 从环境变量中获取仓库路径，例如 "username/repo"
-    repo_full = os.getenv("GITHUB_REPOSITORY", "yourusername/yourrepo")
-    # 构造图片链接（注意分支名称需与实际一致，这里假设为 main 分支）
-    image_url = f"https://raw.githubusercontent.com/{repo_full}/main/export/markers_map.png"
-    image_md = f"![地图]({image_url})"
+    # 读取地图图片（二进制）
+    with open(map_file, "rb") as f:
+        img_data = f.read()
 
+    # Base64 编码图片数据
+    b64_str = base64.b64encode(img_data).decode("utf-8")
+    # 构造 Markdown 图片嵌入格式（data URI）
+    image_md = f"![地图](data:image/png;base64,{b64_str})"
+
+    # 合并文本，建议在正文末尾追加图片
     combined_md = md_text + "\n\n" + image_md
     return combined_md
 
