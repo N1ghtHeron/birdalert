@@ -494,7 +494,7 @@ def commit_generated_file(file_path, commit_message):
             remote_url = f"https://{token}@github.com/{repo_name}.git"
             subprocess.check_call(["git", "remote", "set-url", "origin", remote_url])
         else:
-            print("缺少 TOKEN 或 GITHUB_REPOSITORY 环境变量，无法更新 remote URL。")
+            print("缺少 TOKEN 或 REPO 环境变量，无法更新 remote URL。")
 
         # 配置提交用户信息
         subprocess.check_call(["git", "config", "--global", "user.email", "noctivagantheron@gmail.com"])
