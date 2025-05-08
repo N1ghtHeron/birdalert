@@ -1,11 +1,10 @@
-# - 250430
 #!/usr/bin/env python3
 # coding: utf-8
 """
 input files:
-ebird_taxonomy_intergrated.json：ebird的日本鸟种数据库，包含中文、英语、日语的常用名
-spot_zoopicker.csv：zoopicker东京前5页的观鸟热点，共129处（除去三宅岛附近和多摩動物公園）
-ebird_world_life_list.csv：你的生涯列表，需包含【Scientific Name】。在ebird个人页面可以导出，需自行转换成uft-8格式
+ebird_taxonomy_intergrated.json：eBird 三种语言的鸟种数据库，详见 tools/get_taxonomy
+spot_zoopicker.csv：zoopicker东京前5页的观鸟地，去掉了三宅岛附近以及多摩動物公園，共129处
+ebird_world_life_list.csv：自己的生涯列表，ebird个人页面可以下载csv，注意可能需要转换成utf-8格式
 """
 
 import os
@@ -288,6 +287,11 @@ if __name__ == "__main__":
 
     parser.add_argument("--mode", choices=["generate", "create-issue"], required=True,
                         help="运行模式: generate(生成 Markdown), create-issue(根据 Markdown 创建 GitHub Issue)")
+
+    # TODO：----------------------- local debug 则改成 ----------------------------
+    # parser.add_argument("--mode", choices=["generate", "create-issue"],
+    #                     default="generate",  # 设置默认模式
+    #                     help="运行模式: generate(生成 Markdown), create-issue(根据 Markdown 创建 GitHub Issue)")
 
     args = parser.parse_args()
 
