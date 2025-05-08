@@ -487,9 +487,11 @@ def commit_generated_file(file_path, commit_message):
     """
     try:
         token = os.environ.get("TOKEN")
-        repo_name = os.environ.get("REPO")
+        repo_name = os.environ.get("GITHUB_REPOSITORY")
+        print(f"DEBUG: TOKEN={'<存在>' if token else '<不存在>'}, GITHUB_REPOSITORY={repo_name}")
         if token and repo_name:
             remote_url = f"https://{token}@github.com/{repo_name}.git"
+            print(f"DEBUG: remote_url set to: {remote_url}")
             subprocess.check_call(["git", "remote", "set-url", "origin", remote_url])
         else:
             print("缺少 TOKEN 或 REPO 环境变量，无法更新 remote URL。")
