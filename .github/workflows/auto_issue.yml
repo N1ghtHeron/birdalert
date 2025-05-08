@@ -2,7 +2,7 @@ name: auto alert
 
 on:
   schedule:
-    - cron: "0 20 * * *"   # UTC 20:00 -> 东9 5:00 github的action有延迟，建议提前1～2小时
+    - cron: "0 20 * * *"   # UTC 20:00 -> 东9 5:00 github的action有延迟
     - cron: "0 8 * * *"    # UTC 08:00 -> 东9 17:00
   workflow_dispatch:
 
@@ -13,6 +13,7 @@ jobs:
   run-script:
     runs-on: ubuntu-latest
     env:
+      TOKEN: ${{ secrets.GITHUB_TOKEN }}
       EBIRD_API_KEY: ${{ secrets.EBIRD_API_KEY }}
       LAT: ${{ secrets.LAT }}
       LNG: ${{ secrets.LNG }}
@@ -30,7 +31,7 @@ jobs:
           if [ -f requirements.txt ]; then 
             pip install -r requirements.txt; 
           else 
-            pip install requests beautifulsoup4 ebird-api PyGithub matplotlib numpy;
+            pip install requests beautifulsoup4 ebird-api PyGithub; 
           fi
 
       - name: Generate markdown file
@@ -45,4 +46,4 @@ jobs:
           git push origin main || echo "No changes to push"
 
       - name: Create GitHub issue
-        run: python main.py --mode issue-with-map
+        run: python main.py --mode create-issue
