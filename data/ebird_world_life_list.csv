@@ -1,128 +1,130 @@
 ﻿Row #,Taxon Order,Category,Common Name,Scientific Name,Count,Location,S/P,Date,LocID,SubID,Exotic,Countable
-1,24641,species,冕柳莺,Phylloscopus coronatus,1,練馬区--石神井公園 (Nerima Ward--Shakujii Park),JP-13,04 May 2025,L4949205,S232788448,,1
-2,6646,species,须浮鸥,Chlidonias hybrida,1,川越市--伊佐沼・伊佐沼公園 (Kawagoe--Lake Isanuma and Isanuma Park),JP-11,03 May 2025,L2704124,S232275498,,1
-4,6115,species,流苏鹬,Calidris pugnax,1,川越市--伊佐沼・伊佐沼公園 (Kawagoe--Lake Isanuma and Isanuma Park),JP-11,12 Apr 2025,L2704124,S224749199,,1
-5,6088,species,鹤鹬,Tringa erythropus,2,川越市--伊佐沼・伊佐沼公園 (Kawagoe--Lake Isanuma and Isanuma Park),JP-11,12 Apr 2025,L2704124,S224749199,,1
-6,6001,species,长嘴半蹼鹬 (长嘴鹬),Limnodromus scolopaceus,2,川越市--伊佐沼・伊佐沼公園 (Kawagoe--Lake Isanuma and Isanuma Park),JP-11,12 Apr 2025,L2704124,S224749199,,1
-7,1582,species,灰胸竹鸡,Bambusicola thoracicus,1,多摩市--多摩川--聖蹟桜ヶ丘 (Tama--Tama River--Seisekisakuragaoka),JP-13,06 Apr 2025,L936667,S223295822,N,1
-8,1476,species,绿雉,Phasianus versicolor,1,多摩市--多摩川--聖蹟桜ヶ丘 (Tama--Tama River--Seisekisakuragaoka),JP-13,06 Apr 2025,L936667,S223295822,,1
-9,28515,species,红尾斑鸫,Turdus naumanni,1,小金井市--江戸東京たてもの園 (Koganei--Edo-Tokyo Open Air Architectural Museum),JP-13,30 Mar 2025,L10100332,S221703592,,1
-10,5521,species,红胸田鸡,Zapornia fusca,1,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,23 Mar 2025,L1896754,S220141368,,1
-11,8150,species,雀鹰,Accipiter nisus,1,大田区--東京港野鳥公園・潮入の池 (Ota Ward--Tokyo Port Wild Bird Park (including Tidal Pond)),JP-13,05 Jan 2025,L927941,S208076865,,1
-14,745,species,红胸秋沙鸭,Mergus serrator,1,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,04 Jan 2025,L1896754,S207914594,,1
-15,11997,species,游隼,Falco peregrinus,1,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,22 Dec 2024,L1896754,S206155523,,1
-16,727,species,斑头秋沙鸭 (白秋沙鸭),Mergellus albellus,5,戸田市--彩湖 (Toda--Sai Lake),JP-11,15 Dec 2024,L4200926,S205438793,,1
-17,31824,species,黑头蜡嘴雀,Eophona personata,4,東大和市--狭山公園 (Higashiyamato--Sayama Park),JP-13,14 Dec 2024,L27855031,S205309826,,1
-18,8470,species,普通鵟,Buteo japonicus,1,大田区--東京港野鳥公園・潮入の池 (Ota Ward--Tokyo Port Wild Bird Park (including Tidal Pond)),JP-13,08 Dec 2024,L927941,S204782907,,1
-19,7737,species,鹗,Pandion haliaetus,1,大田区--東京港野鳥公園・潮入の池 (Ota Ward--Tokyo Port Wild Bird Park (including Tidal Pond)),JP-13,08 Dec 2024,L927941,S204782907,,1
-20,461,species,花脸鸭,Sibirionetta formosa,1,町田市--薬師池公園/薬師池 (Machida--Yakushiike Park and Pond),JP-13,07 Dec 2024,L3123792,S204664503,,1
-21,7322,species,暗绿背鸬鹚,Phalacrocorax capillatus,1,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,17 Nov 2024,L1896754,S202741977,,1
-22,11539,species,Japanese Green Woodpecker,Picus awokera,1,府中市--多磨霊園 (Fuchu--Tama Cemetery),JP-13,10 Nov 2024,L7024290,S201966508,,1
-23,6532,species,灰背鸥,Larus schistisagus,1,船橋市--ふなばし三番瀬海浜公園 (Funabashi--Funabashi Sanbanze Seaside Park),JP-12,03 Nov 2024,L1484347,S201204750,,1
-24,6474,species,织女银鸥,Larus vegae,,船橋市--ふなばし三番瀬海浜公園 (Funabashi--Funabashi Sanbanze Seaside Park),JP-12,03 Nov 2024,L1484347,S201204750,,1
-25,6062,species,翘嘴鹬,Xenus cinereus,1,船橋市--ふなばし三番瀬海浜公園 (Funabashi--Funabashi Sanbanze Seaside Park),JP-12,03 Nov 2024,L1484347,S201204750,,1
-26,10894,species,蚁䴕,Jynx torquilla,1,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,27 Oct 2024,L1896754,S200407019,,1
-27,5706,species,黑翅长脚鹬,Himantopus himantopus,15,川越市--伊佐沼・伊佐沼公園 (Kawagoe--Lake Isanuma and Isanuma Park),JP-11,15 Oct 2024,L2704124,S198962622,,1
-28,491,species,罗纹鸭,Mareca falcata,5,千代田区--皇居--桜田濠 (Chiyoda Ward--Imperial Palace--Sakurada Moat),JP-13,14 Oct 2024,L2055415,S198826672,,1
-29,365,species,疣鼻天鹅,Cygnus olor,1,千代田区--皇居--桜田濠 (Chiyoda Ward--Imperial Palace--Sakurada Moat),JP-13,14 Oct 2024,L2055415,S198826672,N,1
-30,11878,species,红隼,Falco tinnunculus,1,川崎市--多摩川と二ヶ領用水の合流--二ヶ領用水の合流--二ヶ領宿河原堰 (Kawasaki--Confluence of Tama River and Nikaryo Aqueduct--Nikaryo Shukugawara Weir),JP-14,13 Oct 2024,L6669771,S198653634,,1
-31,6124,species,红颈滨鹬,Calidris ruficollis,1,船橋市--ふなばし三番瀬海浜公園 (Funabashi--Funabashi Sanbanze Seaside Park),JP-12,17 Sep 2024,L1484347,S195425437,,1
-32,6103,species,大滨鹬,Calidris tenuirostris,3,船橋市--ふなばし三番瀬海浜公園 (Funabashi--Funabashi Sanbanze Seaside Park),JP-12,17 Sep 2024,L1484347,S195425437,,1
-33,7643,species,中白鹭,Ardea intermedia,2,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,06 Aug 2024,L1896754,S190405535,,1
-34,7556,species,黄嘴白鹭,Egretta eulophotes,1,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,06 Aug 2024,L1896754,S190405535,,1
-35,23300,species,棕扇尾莺,Cisticola juncidis,1,府中市--武蔵野の森公園 (Fuchu--Musashino Forest Park),JP-13,15 Jun 2024,L3812816,S181538458,,1
-36,22389,species,云雀,Alauda arvensis,1,府中市--武蔵野の森公園 (Fuchu--Musashino Forest Park),JP-13,07 May 2024,L3812816,S172555592,,1
-37,23484,species,东方大苇莺,Acrocephalus orientalis,1,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,06 May 2024,L1896754,S172345257,,1
-38,7443,species,黑脸琵鹭,Platalea minor,1,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,06 May 2024,L1896754,S172345257,,1
-39,6076,species,红脚鹬,Tringa totanus,1,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,06 May 2024,L1896754,S172345257,,1
-40,23990,species,烟腹毛脚燕,Delichon dasypus,3,板橋区--浮間公園/浮間ヶ池 (Itabashi Ward--Ukima Park / Ukima Pond),JP-13,05 May 2024,L5234698,S172074487,,1
-41,7581,species,绿鹭,Butorides striata,2,板橋区--浮間公園/浮間ヶ池 (Itabashi Ward--Ukima Park / Ukima Pond),JP-13,05 May 2024,L5234698,S172074487,,1
-42,29234,species,黄眉姬鹟,Ficedula narcissina,1,八王子市--八王子城跡 (Hachioji--Hachioji Castle Ruins),JP-13,04 May 2024,L7004676,S171819734,,1
-43,6099,species,翻石鹬,Arenaria interpres,21,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,29 Apr 2024,L1896754,S170899950,,1
-44,5964,species,大杓鹬,Numenius madagascariensis,1,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,29 Apr 2024,L1896754,S170899950,,1
-45,6609,species,白额燕鸥,Sternula albifrons,2,船橋市--ふなばし三番瀬海浜公園 (Funabashi--Funabashi Sanbanze Seaside Park),JP-12,28 Apr 2024,L1484347,S170661664,,1
-46,6090,species,青脚鹬,Tringa nebularia,1,船橋市--ふなばし三番瀬海浜公園 (Funabashi--Funabashi Sanbanze Seaside Park),JP-12,28 Apr 2024,L1484347,S170661664,,1
-47,5973,species,斑尾塍鹬,Limosa lapponica,,船橋市--ふなばし三番瀬海浜公園 (Funabashi--Funabashi Sanbanze Seaside Park),JP-12,28 Apr 2024,L1484347,S170661664,,1
-48,5847,species,蒙古沙鸻,Anarhynchus mongolus,7,船橋市--ふなばし三番瀬海浜公園 (Funabashi--Funabashi Sanbanze Seaside Park),JP-12,28 Apr 2024,L1484347,S170661664,,1
-49,5951,species,中杓鹬,Numenius phaeopus,2,大田区--東京港野鳥公園・潮入の池 (Ota Ward--Tokyo Port Wild Bird Park (including Tidal Pond)),JP-13,27 Apr 2024,L927941,S170461984,,1
-50,4089,species,小白腰雨燕,Apus nipalensis,8,大田区--東京港野鳥公園・潮入の池 (Ota Ward--Tokyo Port Wild Bird Park (including Tidal Pond)),JP-13,27 Apr 2024,L927941,S170461984,,1
-51,5405,species,黑水鸡,Gallinula chloropus,1,府中市--武蔵野の森公園 (Fuchu--Musashino Forest Park),JP-13,20 Apr 2024,L3812816,S169395914,,1
-52,8188,species,苍鹰,Astur gentilis,1,府中市--武蔵野の森公園 (Fuchu--Musashino Forest Park),JP-13,14 Apr 2024,L3812816,S168513884,,1
-53,5787,species,金眶鸻,Thinornis dubius,2,府中市--武蔵野の森公園 (Fuchu--Musashino Forest Park),JP-13,14 Apr 2024,L3812816,S168513884,,1
-54,23957,species,家燕,Hirundo rustica,1,練馬区--石神井公園 (Nerima Ward--Shakujii Park),JP-13,02 Apr 2024,L4949205,S166907829,,1
-55,32556,species,日本灰头鹀,Emberiza personata,2,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,16 Mar 2024,L1896754,S164979190,,1
-56,32524,species,芦鹀,Emberiza schoeniclus,4,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,16 Mar 2024,L1896754,S164979190,,1
-57,24920,species,日本树莺,Horornis diphone,1,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,16 Mar 2024,L1896754,S164979190,,1
-58,6797,species,黑颈䴙䴘,Podiceps nigricollis,1,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,16 Mar 2024,L1896754,S164979190,,1
-59,5966,species,白腰杓鹬,Numenius arquata,2,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,16 Mar 2024,L1896754,S164979190,,1
-60,487,species,赤膀鸭,Mareca strepera,2,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,16 Mar 2024,L1896754,S164979190,,1
-61,32067,species,金翅雀,Chloris sinica,4,府中市--多磨霊園 (Fuchu--Tama Cemetery),JP-13,10 Mar 2024,L7024290,S164279051,,1
-62,21786,species,杂色山雀,Sittiparus varius,1,新宿区--新宿御苑 (Shinjuku Ward--Shinjuku Gyoen National Garden),JP-13,09 Mar 2024,L1416996,S164166975,,1
-63,20811,species,牛头伯劳,Lanius bucephalus,2,新宿区--新宿御苑 (Shinjuku Ward--Shinjuku Gyoen National Garden),JP-13,09 Mar 2024,L1416996,S164166975,,1
-64,443,species,鸳鸯,Aix galericulata,13,新宿区--新宿御苑 (Shinjuku Ward--Shinjuku Gyoen National Garden),JP-13,09 Mar 2024,L1416996,S164166975,,1
-65,28514,species,斑鸫,Turdus eunomus,1,船橋市--ふなばし三番瀬海浜公園 (Funabashi--Funabashi Sanbanze Seaside Park),JP-12,16 Feb 2024,L1484347,S161623266,,1
-66,6127,species,三趾滨鹬,Calidris alba,,船橋市--ふなばし三番瀬海浜公園 (Funabashi--Funabashi Sanbanze Seaside Park),JP-12,16 Feb 2024,L1484347,S161623266,,1
-67,9130,species,长尾林鸮/四川林鸮,Strix uralensis,1,葛飾区--水元公園 (Katsushika Ward--Mizumoto Park),JP-13,26 Dec 2023,L1966910,S157128314,,1
-68,7513,species,夜鹭,Nycticorax nycticorax,2,武蔵野区--井の頭公園 (Musashino--Inokashira Park),JP-13,23 Dec 2023,L1525454,S156902913,,1
-69,6409,species,红嘴鸥,Chroicocephalus ridibundus,,台東区--上野公園--不忍池 (Taito Ward--Ueno Park--Shinobazu Pond),JP-13,13 Dec 2023,L920941,S156230571,,1
-70,645,species,红头潜鸭,Aythya ferina,1,台東区--上野公園--不忍池 (Taito Ward--Ueno Park--Shinobazu Pond),JP-13,13 Dec 2023,L920941,S156230571,,1
-72,8064,species,日本松雀鹰,Tachyspiza gularis,1,練馬区--石神井公園 (Nerima Ward--Shakujii Park),JP-13,10 Dec 2023,L4949205,S156058490,,1
-74,6787,species,角䴙䴘,Podiceps auritus,2,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,02 Dec 2023,L1896754,S155595082,,1
-75,32442,species,三道眉草鹀,Emberiza cioides,4,立川市--国営昭和記念公園 (Tachikawa--Showa Memorial Park),JP-13,18 Nov 2023,L957598,S154658963,,1
-76,8249,species,黑鸢,Milvus migrans,1,船橋市--ふなばし三番瀬海浜公園 (Funabashi--Funabashi Sanbanze Seaside Park),JP-12,14 Nov 2023,L1484347,S154888070,,1
-77,6793,species,凤头䴙䴘,Podiceps cristatus,1,船橋市--ふなばし三番瀬海浜公園 (Funabashi--Funabashi Sanbanze Seaside Park),JP-12,14 Nov 2023,L1484347,S154888070,,1
-78,669,species,斑背潜鸭,Aythya marila,,船橋市--ふなばし三番瀬海浜公園 (Funabashi--Funabashi Sanbanze Seaside Park),JP-12,14 Nov 2023,L1484347,S154888070,,1
-79,5729,species,蛎鹬,Haematopus ostralegus,,船橋市--ふなばし三番瀬海浜公園 (Funabashi--Funabashi Sanbanze Seaside Park),JP-12,29 Oct 2023,L1484347,S153391008,,1
-80,31441,species,日本鹡鸰,Motacilla grandis,1,川崎市--多摩川と二ヶ領用水の合流--二ヶ領用水の合流--二ヶ領宿河原堰 (Kawasaki--Confluence of Tama River and Nikaryo Aqueduct--Nikaryo Shukugawara Weir),JP-14,17 Oct 2023,L6669771,S152448374,,1
-81,31403,species,灰鹡鸰,Motacilla cinerea,1,川崎市--多摩川と二ヶ領用水の合流--二ヶ領用水の合流--二ヶ領宿河原堰 (Kawasaki--Confluence of Tama River and Nikaryo Aqueduct--Nikaryo Shukugawara Weir),JP-14,17 Oct 2023,L6669771,S152448374,,1
-82,27616,species,灰椋鸟,Spodiopsar cineraceus,,川崎市--多摩川と二ヶ領用水の合流--二ヶ領用水の合流--二ヶ領宿河原堰 (Kawasaki--Confluence of Tama River and Nikaryo Aqueduct--Nikaryo Shukugawara Weir),JP-14,17 Oct 2023,L6669771,S152448374,,1
-83,21351,species,小嘴乌鸦,Corvus corone,,川崎市--多摩川と二ヶ領用水の合流--二ヶ領用水の合流--二ヶ領宿河原堰 (Kawasaki--Confluence of Tama River and Nikaryo Aqueduct--Nikaryo Shukugawara Weir),JP-14,17 Oct 2023,L6669771,S152448374,,1
-85,6444,species,黑尾鸥,Larus crassirostris,,船橋市--ふなばし三番瀬海浜公園 (Funabashi--Funabashi Sanbanze Seaside Park),JP-12,14 Oct 2023,L1484347,S152135322,,1
-86,6130,species,黑腹滨鹬,Calidris alpina,,船橋市--ふなばし三番瀬海浜公園 (Funabashi--Funabashi Sanbanze Seaside Park),JP-12,14 Oct 2023,L1484347,S152135322,,1
-87,5893,species,环颈鸻,Anarhynchus alexandrinus,,船橋市--ふなばし三番瀬海浜公園 (Funabashi--Funabashi Sanbanze Seaside Park),JP-12,14 Oct 2023,L1484347,S152135322,,1
-88,5754,species,灰斑鸻,Pluvialis squatarola,,船橋市--ふなばし三番瀬海浜公園 (Funabashi--Funabashi Sanbanze Seaside Park),JP-12,14 Oct 2023,L1484347,S152135322,,1
-89,28531,species,北灰鹟,Muscicapa dauurica,1,三鷹市--野川公園 (Mitaka--Nogawa Park),JP-13,14 Oct 2023,L7024293,S152125443,,1
-90,28522,species,灰纹鹟,Muscicapa griseisticta,1,三鷹市--野川公園 (Mitaka--Nogawa Park),JP-13,14 Oct 2023,L7024293,S152125443,,1
-91,25390,species,日本绣眼鸟,Zosterops japonicus,1,習志野市--谷津干潟 (Narashino--Yatsu Tidal Flat (Yatsu-higata)),JP-12,13 Oct 2023,L1743720,S152058561,,1
-92,21167,species,灰喜鹊,Cyanopica cyanus,3,習志野市--谷津干潟 (Narashino--Yatsu Tidal Flat (Yatsu-higata)),JP-12,13 Oct 2023,L1743720,S152058421,,1
-93,6063,species,矶鹬,Actitis hypoleucos,2,大田区--東京港野鳥公園・潮入の池 (Ota Ward--Tokyo Port Wild Bird Park (including Tidal Pond)),JP-13,06 Oct 2023,L927941,S151521358,,1
-94,6037,species,扇尾沙锥,Gallinago gallinago,1,大田区--東京港野鳥公園・潮入の池 (Ota Ward--Tokyo Port Wild Bird Park (including Tidal Pond)),JP-13,06 Oct 2023,L927941,S151521358,,1
-95,588,species,绿翅鸭/美洲绿翅鸭,Anas crecca,18,大田区--東京港野鳥公園・潮入の池 (Ota Ward--Tokyo Port Wild Bird Park (including Tidal Pond)),JP-13,06 Oct 2023,L927941,S151521358,,1
-96,18440,species,灰山椒鸟,Pericrocotus divaricatus,1,大田区--東京港野鳥公園・潮入の池 (Ota Ward--Tokyo Port Wild Bird Park (including Tidal Pond)),JP-13,06 Oct 2023,L927941,S151540232,,1
-97,31329,species,麻雀 (树麻雀),Passer montanus,14,台東区--上野公園--不忍池 (Taito Ward--Ueno Park--Shinobazu Pond),JP-13,03 Oct 2023,L920941,S151315321,,1
-98,24975,species,北长尾山雀,Aegithalos caudatus,1,台東区--上野公園--不忍池 (Taito Ward--Ueno Park--Shinobazu Pond),JP-13,03 Oct 2023,L920941,S151315321,,1
-99,571,species,针尾鸭,Anas acuta,3,台東区--上野公園--不忍池 (Taito Ward--Ueno Park--Shinobazu Pond),JP-13,03 Oct 2023,L920941,S151315321,,1
-100,7651,species,苍鹭,Ardea cinerea,1,武蔵野区--井の頭公園--ひょうたん池 (Musashino--Inokashira Park--Hyoutan Pond),JP-13,01 Oct 2023,L18934173,S151144616,,1
-101,24339,species,栗耳短脚鹎,Hypsipetes amaurotis,1,三鷹市--井の頭公園--小鳥の森 (Mitaka--Inokashira Park--Kotori-no-mori Bird Sanctuary),JP-13,01 Oct 2023,L22120018,S151141598,,1
-102,12232,species,红领绿鹦鹉,Psittacula krameri,8,武蔵野区--井の頭公園 (Musashino--Inokashira Park),JP-13,01 Oct 2023,L1525454,S151140110,N,1
-103,1817,species,原鸽,Columba livia,2,武蔵野区--井の頭公園 (Musashino--Inokashira Park),JP-13,01 Oct 2023,L1525454,S151140110,N,1
-104,9809,species,普通翠鸟,Alcedo atthis,2,武蔵野区--井の頭公園 (Musashino--Inokashira Park),JP-13,01 Oct 2023,L1525454,S151138869,,1
-105,11138,species,小星头啄木鸟,Yungipicus kizuki,1,三鷹市--野川公園 (Mitaka--Nogawa Park),JP-13,24 Sep 2023,L7024293,S151054557,,1
-106,6071,species,灰尾漂鹬,Tringa brevipes,1,江戸川区--葛西臨海公園--西なぎさ (Edogawa Ward--Kasai Rinkai Park--Nishinagisa),JP-13,27 Aug 2023,L23838625,S151710306,,1
-107,26461,species,画眉,Garrulax canorus,1,立川市--国営昭和記念公園 (Tachikawa--Showa Memorial Park),JP-13,04 Jun 2023,L957598,S168856674,N,1
-108,6749,species,小䴙䴘,Tachybaptus ruficollis,2,立川市--国営昭和記念公園 (Tachikawa--Showa Memorial Park),JP-13,04 Jun 2023,L957598,S168856674,,1
-109,29620,species,小太平鸟,Bombycilla japonica,6,Kokumei Elementary School,JP-27,09 Mar 2023,L30679639,S168857443,,1
-110,21969,species,大山雀,Parus cinereus,1,豊中市--服部緑地 (Toyonaka--Hattori Greenbelt Park),JP-27,04 Mar 2023,L3109101,S168856811,,1
-111,7635,species,大白鹭,Ardea alba,1,豊中市--服部緑地 (Toyonaka--Hattori Greenbelt Park),JP-27,04 Mar 2023,L3109101,S168856811,,1
-112,7562,species,白鹭,Egretta garzetta,1,豊中市--服部緑地 (Toyonaka--Hattori Greenbelt Park),JP-27,04 Mar 2023,L3109101,S168856811,,1
-113,7313,species,普通鸬鹚,Phalacrocorax carbo,2,豊中市--服部緑地 (Toyonaka--Hattori Greenbelt Park),JP-27,04 Mar 2023,L3109101,S168856811,,1
-114,1985,species,山斑鸠,Streptopelia orientalis,2,豊中市--服部緑地 (Toyonaka--Hattori Greenbelt Park),JP-27,04 Mar 2023,L3109101,S168856811,,1
-115,31445,species,白鹡鸰,Motacilla alba,1,大阪市--大阪城公園 (Osaka--Osaka Castle Park),JP-27,26 Feb 2023,L1123077,S168857247,,1
-116,29382,species,蓝矶鸫,Monticola solitarius,1,大阪市--大阪城公園 (Osaka--Osaka Castle Park),JP-27,26 Feb 2023,L1123077,S168857247,,1
-117,29360,species,北红尾鸲,Phoenicurus auroreus,1,大阪市--大阪城公園 (Osaka--Osaka Castle Park),JP-27,26 Feb 2023,L1123077,S168857247,,1
-118,28424,species,白腹鸫,Turdus pallidus,1,大阪市--大阪城公園 (Osaka--Osaka Castle Park),JP-27,26 Feb 2023,L1123077,S168857247,,1
-119,21362,species,大嘴乌鸦/丛林鸦,Corvus macrorhynchos,,大阪市--大阪城公園 (Osaka--Osaka Castle Park),JP-27,26 Feb 2023,L1123077,S168857247,,1
-120,5430,species,白骨顶 (骨顶鸡),Fulica atra,2,大阪市--大阪城公園 (Osaka--Osaka Castle Park),JP-27,26 Feb 2023,L1123077,S168857247,,1
-121,662,species,凤头潜鸭,Aythya fuligula,,大阪市--大阪城公園 (Osaka--Osaka Castle Park),JP-27,26 Feb 2023,L1123077,S168857247,,1
-122,525,species,绿头鸭,Anas platyrhynchos,2,大阪市--大阪城公園 (Osaka--Osaka Castle Park),JP-27,26 Feb 2023,L1123077,S168857247,,1
-123,523,species,斑嘴鸭,Anas zonorhyncha,1,大阪市--大阪城公園 (Osaka--Osaka Castle Park),JP-27,26 Feb 2023,L1123077,S168857247,,1
-124,494,species,赤颈鸭,Mareca penelope,1,大阪市--大阪城公園 (Osaka--Osaka Castle Park),JP-27,26 Feb 2023,L1123077,S168857247,,1
-125,483,species,琵嘴鸭,Spatula clypeata,20,大阪市--大阪城公園 (Osaka--Osaka Castle Park),JP-27,26 Feb 2023,L1123077,S168857247,,1
-73,542,hybrid,绿头鸭x斑嘴鸭 (杂交),Anas platyrhynchos x zonorhyncha,1,練馬区--石神井公園 (Nerima Ward--Shakujii Park),JP-13,10 Dec 2023,L4949205,S156058490,,0
-3,6291,spuh,未识别的鸻鹬类,Charadriiformes sp. (shorebird sp.),1,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,27 Apr 2025,L1896754,S229851953,,0
-12,6171,spuh,未识别的小型滨鹬,Calidris sp. (peep sp.),20,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,04 Jan 2025,L1896754,S207914594,,0
-13,5971,slash,大杓鹬/白腰杓鹬,Numenius madagascariensis/arquata,2,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,04 Jan 2025,L1896754,S207914594,,0
-71,28518,slash,斑鸫/红尾斑鸫,Turdus eunomus/naumanni,1,練馬区--石神井公園 (Nerima Ward--Shakujii Park),JP-13,10 Dec 2023,L4949205,S156058490,,0
-84,6477,slash,织女银鸥/蒙古银鸥 (西伯利亚银鸥),Larus vegae/mongolicus,,船橋市--ふなばし三番瀬海浜公園 (Funabashi--Funabashi Sanbanze Seaside Park),JP-12,14 Oct 2023,L1484347,S152135322,,0
+1,24704,species,库页岛柳莺,Phylloscopus borealoides,1,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,05 May 2025,L1896754,S233324188,,1
+2,6674,species,普通燕鸥,Sterna hirundo,1,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,05 May 2025,L1896754,S233324188,,1
+3,24641,species,冕柳莺,Phylloscopus coronatus,1,練馬区--石神井公園 (Nerima Ward--Shakujii Park),JP-13,04 May 2025,L4949205,S232788448,,1
+4,6646,species,须浮鸥,Chlidonias hybrida,1,川越市--伊佐沼・伊佐沼公園 (Kawagoe--Lake Isanuma and Isanuma Park),JP-11,03 May 2025,L2704124,S232275498,,1
+6,6115,species,流苏鹬,Calidris pugnax,1,川越市--伊佐沼・伊佐沼公園 (Kawagoe--Lake Isanuma and Isanuma Park),JP-11,12 Apr 2025,L2704124,S224749199,,1
+7,6088,species,鹤鹬,Tringa erythropus,2,川越市--伊佐沼・伊佐沼公園 (Kawagoe--Lake Isanuma and Isanuma Park),JP-11,12 Apr 2025,L2704124,S224749199,,1
+8,6001,species,长嘴半蹼鹬 (长嘴鹬),Limnodromus scolopaceus,2,川越市--伊佐沼・伊佐沼公園 (Kawagoe--Lake Isanuma and Isanuma Park),JP-11,12 Apr 2025,L2704124,S224749199,,1
+9,1582,species,灰胸竹鸡,Bambusicola thoracicus,1,多摩市--多摩川--聖蹟桜ヶ丘 (Tama--Tama River--Seisekisakuragaoka),JP-13,06 Apr 2025,L936667,S223295822,N,1
+10,1476,species,绿雉,Phasianus versicolor,1,多摩市--多摩川--聖蹟桜ヶ丘 (Tama--Tama River--Seisekisakuragaoka),JP-13,06 Apr 2025,L936667,S223295822,,1
+11,28515,species,红尾斑鸫,Turdus naumanni,1,小金井市--江戸東京たてもの園 (Koganei--Edo-Tokyo Open Air Architectural Museum),JP-13,30 Mar 2025,L10100332,S221703592,,1
+12,5521,species,红胸田鸡,Zapornia fusca,1,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,23 Mar 2025,L1896754,S220141368,,1
+13,8150,species,雀鹰,Accipiter nisus,1,大田区--東京港野鳥公園・潮入の池 (Ota Ward--Tokyo Port Wild Bird Park (including Tidal Pond)),JP-13,05 Jan 2025,L927941,S208076865,,1
+16,745,species,红胸秋沙鸭,Mergus serrator,1,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,04 Jan 2025,L1896754,S207914594,,1
+17,11997,species,游隼,Falco peregrinus,1,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,22 Dec 2024,L1896754,S206155523,,1
+18,727,species,斑头秋沙鸭 (白秋沙鸭),Mergellus albellus,5,戸田市--彩湖 (Toda--Sai Lake),JP-11,15 Dec 2024,L4200926,S205438793,,1
+19,31824,species,黑头蜡嘴雀,Eophona personata,4,東大和市--狭山公園 (Higashiyamato--Sayama Park),JP-13,14 Dec 2024,L27855031,S205309826,,1
+20,8470,species,普通鵟,Buteo japonicus,1,大田区--東京港野鳥公園・潮入の池 (Ota Ward--Tokyo Port Wild Bird Park (including Tidal Pond)),JP-13,08 Dec 2024,L927941,S204782907,,1
+21,7737,species,鹗,Pandion haliaetus,1,大田区--東京港野鳥公園・潮入の池 (Ota Ward--Tokyo Port Wild Bird Park (including Tidal Pond)),JP-13,08 Dec 2024,L927941,S204782907,,1
+22,461,species,花脸鸭,Sibirionetta formosa,1,町田市--薬師池公園/薬師池 (Machida--Yakushiike Park and Pond),JP-13,07 Dec 2024,L3123792,S204664503,,1
+23,7322,species,暗绿背鸬鹚,Phalacrocorax capillatus,1,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,17 Nov 2024,L1896754,S202741977,,1
+24,11539,species,Japanese Green Woodpecker,Picus awokera,1,府中市--多磨霊園 (Fuchu--Tama Cemetery),JP-13,10 Nov 2024,L7024290,S201966508,,1
+25,6532,species,灰背鸥,Larus schistisagus,1,船橋市--ふなばし三番瀬海浜公園 (Funabashi--Funabashi Sanbanze Seaside Park),JP-12,03 Nov 2024,L1484347,S201204750,,1
+26,6474,species,织女银鸥,Larus vegae,,船橋市--ふなばし三番瀬海浜公園 (Funabashi--Funabashi Sanbanze Seaside Park),JP-12,03 Nov 2024,L1484347,S201204750,,1
+27,6062,species,翘嘴鹬,Xenus cinereus,1,船橋市--ふなばし三番瀬海浜公園 (Funabashi--Funabashi Sanbanze Seaside Park),JP-12,03 Nov 2024,L1484347,S201204750,,1
+28,10894,species,蚁䴕,Jynx torquilla,1,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,27 Oct 2024,L1896754,S200407019,,1
+29,5706,species,黑翅长脚鹬,Himantopus himantopus,15,川越市--伊佐沼・伊佐沼公園 (Kawagoe--Lake Isanuma and Isanuma Park),JP-11,15 Oct 2024,L2704124,S198962622,,1
+30,491,species,罗纹鸭,Mareca falcata,5,千代田区--皇居--桜田濠 (Chiyoda Ward--Imperial Palace--Sakurada Moat),JP-13,14 Oct 2024,L2055415,S198826672,,1
+31,365,species,疣鼻天鹅,Cygnus olor,1,千代田区--皇居--桜田濠 (Chiyoda Ward--Imperial Palace--Sakurada Moat),JP-13,14 Oct 2024,L2055415,S198826672,N,1
+32,11878,species,红隼,Falco tinnunculus,1,川崎市--多摩川と二ヶ領用水の合流--二ヶ領用水の合流--二ヶ領宿河原堰 (Kawasaki--Confluence of Tama River and Nikaryo Aqueduct--Nikaryo Shukugawara Weir),JP-14,13 Oct 2024,L6669771,S198653634,,1
+33,6124,species,红颈滨鹬,Calidris ruficollis,1,船橋市--ふなばし三番瀬海浜公園 (Funabashi--Funabashi Sanbanze Seaside Park),JP-12,17 Sep 2024,L1484347,S195425437,,1
+34,6103,species,大滨鹬,Calidris tenuirostris,3,船橋市--ふなばし三番瀬海浜公園 (Funabashi--Funabashi Sanbanze Seaside Park),JP-12,17 Sep 2024,L1484347,S195425437,,1
+35,7643,species,中白鹭,Ardea intermedia,2,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,06 Aug 2024,L1896754,S190405535,,1
+36,7556,species,黄嘴白鹭,Egretta eulophotes,1,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,06 Aug 2024,L1896754,S190405535,,1
+37,23300,species,棕扇尾莺,Cisticola juncidis,1,府中市--武蔵野の森公園 (Fuchu--Musashino Forest Park),JP-13,15 Jun 2024,L3812816,S181538458,,1
+38,22389,species,云雀,Alauda arvensis,1,府中市--武蔵野の森公園 (Fuchu--Musashino Forest Park),JP-13,07 May 2024,L3812816,S172555592,,1
+39,23484,species,东方大苇莺,Acrocephalus orientalis,1,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,06 May 2024,L1896754,S172345257,,1
+40,7443,species,黑脸琵鹭,Platalea minor,1,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,06 May 2024,L1896754,S172345257,,1
+41,6076,species,红脚鹬,Tringa totanus,1,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,06 May 2024,L1896754,S172345257,,1
+42,23990,species,烟腹毛脚燕,Delichon dasypus,3,板橋区--浮間公園/浮間ヶ池 (Itabashi Ward--Ukima Park / Ukima Pond),JP-13,05 May 2024,L5234698,S172074487,,1
+43,7581,species,绿鹭,Butorides striata,2,板橋区--浮間公園/浮間ヶ池 (Itabashi Ward--Ukima Park / Ukima Pond),JP-13,05 May 2024,L5234698,S172074487,,1
+44,29234,species,黄眉姬鹟,Ficedula narcissina,1,八王子市--八王子城跡 (Hachioji--Hachioji Castle Ruins),JP-13,04 May 2024,L7004676,S171819734,,1
+45,6099,species,翻石鹬,Arenaria interpres,21,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,29 Apr 2024,L1896754,S170899950,,1
+46,5964,species,大杓鹬,Numenius madagascariensis,1,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,29 Apr 2024,L1896754,S170899950,,1
+47,6609,species,白额燕鸥,Sternula albifrons,2,船橋市--ふなばし三番瀬海浜公園 (Funabashi--Funabashi Sanbanze Seaside Park),JP-12,28 Apr 2024,L1484347,S170661664,,1
+48,6090,species,青脚鹬,Tringa nebularia,1,船橋市--ふなばし三番瀬海浜公園 (Funabashi--Funabashi Sanbanze Seaside Park),JP-12,28 Apr 2024,L1484347,S170661664,,1
+49,5973,species,斑尾塍鹬,Limosa lapponica,,船橋市--ふなばし三番瀬海浜公園 (Funabashi--Funabashi Sanbanze Seaside Park),JP-12,28 Apr 2024,L1484347,S170661664,,1
+50,5847,species,蒙古沙鸻,Anarhynchus mongolus,7,船橋市--ふなばし三番瀬海浜公園 (Funabashi--Funabashi Sanbanze Seaside Park),JP-12,28 Apr 2024,L1484347,S170661664,,1
+51,5951,species,中杓鹬,Numenius phaeopus,2,大田区--東京港野鳥公園・潮入の池 (Ota Ward--Tokyo Port Wild Bird Park (including Tidal Pond)),JP-13,27 Apr 2024,L927941,S170461984,,1
+52,4089,species,小白腰雨燕,Apus nipalensis,8,大田区--東京港野鳥公園・潮入の池 (Ota Ward--Tokyo Port Wild Bird Park (including Tidal Pond)),JP-13,27 Apr 2024,L927941,S170461984,,1
+53,5405,species,黑水鸡,Gallinula chloropus,1,府中市--武蔵野の森公園 (Fuchu--Musashino Forest Park),JP-13,20 Apr 2024,L3812816,S169395914,,1
+54,8188,species,苍鹰,Astur gentilis,1,府中市--武蔵野の森公園 (Fuchu--Musashino Forest Park),JP-13,14 Apr 2024,L3812816,S168513884,,1
+55,5787,species,金眶鸻,Thinornis dubius,2,府中市--武蔵野の森公園 (Fuchu--Musashino Forest Park),JP-13,14 Apr 2024,L3812816,S168513884,,1
+56,23957,species,家燕,Hirundo rustica,1,練馬区--石神井公園 (Nerima Ward--Shakujii Park),JP-13,02 Apr 2024,L4949205,S166907829,,1
+57,32556,species,日本灰头鹀,Emberiza personata,2,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,16 Mar 2024,L1896754,S164979190,,1
+58,32524,species,芦鹀,Emberiza schoeniclus,4,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,16 Mar 2024,L1896754,S164979190,,1
+59,24920,species,日本树莺,Horornis diphone,1,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,16 Mar 2024,L1896754,S164979190,,1
+60,6797,species,黑颈䴙䴘,Podiceps nigricollis,1,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,16 Mar 2024,L1896754,S164979190,,1
+61,5966,species,白腰杓鹬,Numenius arquata,2,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,16 Mar 2024,L1896754,S164979190,,1
+62,487,species,赤膀鸭,Mareca strepera,2,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,16 Mar 2024,L1896754,S164979190,,1
+63,32067,species,金翅雀,Chloris sinica,4,府中市--多磨霊園 (Fuchu--Tama Cemetery),JP-13,10 Mar 2024,L7024290,S164279051,,1
+64,21786,species,杂色山雀,Sittiparus varius,1,新宿区--新宿御苑 (Shinjuku Ward--Shinjuku Gyoen National Garden),JP-13,09 Mar 2024,L1416996,S164166975,,1
+65,20811,species,牛头伯劳,Lanius bucephalus,2,新宿区--新宿御苑 (Shinjuku Ward--Shinjuku Gyoen National Garden),JP-13,09 Mar 2024,L1416996,S164166975,,1
+66,443,species,鸳鸯,Aix galericulata,13,新宿区--新宿御苑 (Shinjuku Ward--Shinjuku Gyoen National Garden),JP-13,09 Mar 2024,L1416996,S164166975,,1
+67,28514,species,斑鸫,Turdus eunomus,1,船橋市--ふなばし三番瀬海浜公園 (Funabashi--Funabashi Sanbanze Seaside Park),JP-12,16 Feb 2024,L1484347,S161623266,,1
+68,6127,species,三趾滨鹬,Calidris alba,,船橋市--ふなばし三番瀬海浜公園 (Funabashi--Funabashi Sanbanze Seaside Park),JP-12,16 Feb 2024,L1484347,S161623266,,1
+69,9130,species,长尾林鸮/四川林鸮,Strix uralensis,1,葛飾区--水元公園 (Katsushika Ward--Mizumoto Park),JP-13,26 Dec 2023,L1966910,S157128314,,1
+70,7513,species,夜鹭,Nycticorax nycticorax,2,武蔵野区--井の頭公園 (Musashino--Inokashira Park),JP-13,23 Dec 2023,L1525454,S156902913,,1
+71,6409,species,红嘴鸥,Chroicocephalus ridibundus,,台東区--上野公園--不忍池 (Taito Ward--Ueno Park--Shinobazu Pond),JP-13,13 Dec 2023,L920941,S156230571,,1
+72,645,species,红头潜鸭,Aythya ferina,1,台東区--上野公園--不忍池 (Taito Ward--Ueno Park--Shinobazu Pond),JP-13,13 Dec 2023,L920941,S156230571,,1
+74,8064,species,日本松雀鹰,Tachyspiza gularis,1,練馬区--石神井公園 (Nerima Ward--Shakujii Park),JP-13,10 Dec 2023,L4949205,S156058490,,1
+76,6787,species,角䴙䴘,Podiceps auritus,2,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,02 Dec 2023,L1896754,S155595082,,1
+77,32442,species,三道眉草鹀,Emberiza cioides,4,立川市--国営昭和記念公園 (Tachikawa--Showa Memorial Park),JP-13,18 Nov 2023,L957598,S154658963,,1
+78,8249,species,黑鸢,Milvus migrans,1,船橋市--ふなばし三番瀬海浜公園 (Funabashi--Funabashi Sanbanze Seaside Park),JP-12,14 Nov 2023,L1484347,S154888070,,1
+79,6793,species,凤头䴙䴘,Podiceps cristatus,1,船橋市--ふなばし三番瀬海浜公園 (Funabashi--Funabashi Sanbanze Seaside Park),JP-12,14 Nov 2023,L1484347,S154888070,,1
+80,669,species,斑背潜鸭,Aythya marila,,船橋市--ふなばし三番瀬海浜公園 (Funabashi--Funabashi Sanbanze Seaside Park),JP-12,14 Nov 2023,L1484347,S154888070,,1
+81,5729,species,蛎鹬,Haematopus ostralegus,,船橋市--ふなばし三番瀬海浜公園 (Funabashi--Funabashi Sanbanze Seaside Park),JP-12,29 Oct 2023,L1484347,S153391008,,1
+82,31441,species,日本鹡鸰,Motacilla grandis,1,川崎市--多摩川と二ヶ領用水の合流--二ヶ領用水の合流--二ヶ領宿河原堰 (Kawasaki--Confluence of Tama River and Nikaryo Aqueduct--Nikaryo Shukugawara Weir),JP-14,17 Oct 2023,L6669771,S152448374,,1
+83,31403,species,灰鹡鸰,Motacilla cinerea,1,川崎市--多摩川と二ヶ領用水の合流--二ヶ領用水の合流--二ヶ領宿河原堰 (Kawasaki--Confluence of Tama River and Nikaryo Aqueduct--Nikaryo Shukugawara Weir),JP-14,17 Oct 2023,L6669771,S152448374,,1
+84,27616,species,灰椋鸟,Spodiopsar cineraceus,,川崎市--多摩川と二ヶ領用水の合流--二ヶ領用水の合流--二ヶ領宿河原堰 (Kawasaki--Confluence of Tama River and Nikaryo Aqueduct--Nikaryo Shukugawara Weir),JP-14,17 Oct 2023,L6669771,S152448374,,1
+85,21351,species,小嘴乌鸦,Corvus corone,,川崎市--多摩川と二ヶ領用水の合流--二ヶ領用水の合流--二ヶ領宿河原堰 (Kawasaki--Confluence of Tama River and Nikaryo Aqueduct--Nikaryo Shukugawara Weir),JP-14,17 Oct 2023,L6669771,S152448374,,1
+87,6444,species,黑尾鸥,Larus crassirostris,,船橋市--ふなばし三番瀬海浜公園 (Funabashi--Funabashi Sanbanze Seaside Park),JP-12,14 Oct 2023,L1484347,S152135322,,1
+88,6130,species,黑腹滨鹬,Calidris alpina,,船橋市--ふなばし三番瀬海浜公園 (Funabashi--Funabashi Sanbanze Seaside Park),JP-12,14 Oct 2023,L1484347,S152135322,,1
+89,5893,species,环颈鸻,Anarhynchus alexandrinus,,船橋市--ふなばし三番瀬海浜公園 (Funabashi--Funabashi Sanbanze Seaside Park),JP-12,14 Oct 2023,L1484347,S152135322,,1
+90,5754,species,灰斑鸻,Pluvialis squatarola,,船橋市--ふなばし三番瀬海浜公園 (Funabashi--Funabashi Sanbanze Seaside Park),JP-12,14 Oct 2023,L1484347,S152135322,,1
+91,28531,species,北灰鹟,Muscicapa dauurica,1,三鷹市--野川公園 (Mitaka--Nogawa Park),JP-13,14 Oct 2023,L7024293,S152125443,,1
+92,28522,species,灰纹鹟,Muscicapa griseisticta,1,三鷹市--野川公園 (Mitaka--Nogawa Park),JP-13,14 Oct 2023,L7024293,S152125443,,1
+93,25390,species,日本绣眼鸟,Zosterops japonicus,1,習志野市--谷津干潟 (Narashino--Yatsu Tidal Flat (Yatsu-higata)),JP-12,13 Oct 2023,L1743720,S152058561,,1
+94,21167,species,灰喜鹊,Cyanopica cyanus,3,習志野市--谷津干潟 (Narashino--Yatsu Tidal Flat (Yatsu-higata)),JP-12,13 Oct 2023,L1743720,S152058421,,1
+95,6063,species,矶鹬,Actitis hypoleucos,2,大田区--東京港野鳥公園・潮入の池 (Ota Ward--Tokyo Port Wild Bird Park (including Tidal Pond)),JP-13,06 Oct 2023,L927941,S151521358,,1
+96,6037,species,扇尾沙锥,Gallinago gallinago,1,大田区--東京港野鳥公園・潮入の池 (Ota Ward--Tokyo Port Wild Bird Park (including Tidal Pond)),JP-13,06 Oct 2023,L927941,S151521358,,1
+97,588,species,绿翅鸭/美洲绿翅鸭,Anas crecca,18,大田区--東京港野鳥公園・潮入の池 (Ota Ward--Tokyo Port Wild Bird Park (including Tidal Pond)),JP-13,06 Oct 2023,L927941,S151521358,,1
+98,18440,species,灰山椒鸟,Pericrocotus divaricatus,1,大田区--東京港野鳥公園・潮入の池 (Ota Ward--Tokyo Port Wild Bird Park (including Tidal Pond)),JP-13,06 Oct 2023,L927941,S151540232,,1
+99,31329,species,麻雀 (树麻雀),Passer montanus,14,台東区--上野公園--不忍池 (Taito Ward--Ueno Park--Shinobazu Pond),JP-13,03 Oct 2023,L920941,S151315321,,1
+100,24975,species,北长尾山雀,Aegithalos caudatus,1,台東区--上野公園--不忍池 (Taito Ward--Ueno Park--Shinobazu Pond),JP-13,03 Oct 2023,L920941,S151315321,,1
+101,571,species,针尾鸭,Anas acuta,3,台東区--上野公園--不忍池 (Taito Ward--Ueno Park--Shinobazu Pond),JP-13,03 Oct 2023,L920941,S151315321,,1
+102,7651,species,苍鹭,Ardea cinerea,1,武蔵野区--井の頭公園--ひょうたん池 (Musashino--Inokashira Park--Hyoutan Pond),JP-13,01 Oct 2023,L18934173,S151144616,,1
+103,24339,species,栗耳短脚鹎,Hypsipetes amaurotis,1,三鷹市--井の頭公園--小鳥の森 (Mitaka--Inokashira Park--Kotori-no-mori Bird Sanctuary),JP-13,01 Oct 2023,L22120018,S151141598,,1
+104,12232,species,红领绿鹦鹉,Psittacula krameri,8,武蔵野区--井の頭公園 (Musashino--Inokashira Park),JP-13,01 Oct 2023,L1525454,S151140110,N,1
+105,1817,species,原鸽,Columba livia,2,武蔵野区--井の頭公園 (Musashino--Inokashira Park),JP-13,01 Oct 2023,L1525454,S151140110,N,1
+106,9809,species,普通翠鸟,Alcedo atthis,2,武蔵野区--井の頭公園 (Musashino--Inokashira Park),JP-13,01 Oct 2023,L1525454,S151138869,,1
+107,11138,species,小星头啄木鸟,Yungipicus kizuki,1,三鷹市--野川公園 (Mitaka--Nogawa Park),JP-13,24 Sep 2023,L7024293,S151054557,,1
+108,6071,species,灰尾漂鹬,Tringa brevipes,1,江戸川区--葛西臨海公園--西なぎさ (Edogawa Ward--Kasai Rinkai Park--Nishinagisa),JP-13,27 Aug 2023,L23838625,S151710306,,1
+109,26461,species,画眉,Garrulax canorus,1,立川市--国営昭和記念公園 (Tachikawa--Showa Memorial Park),JP-13,04 Jun 2023,L957598,S168856674,N,1
+110,6749,species,小䴙䴘,Tachybaptus ruficollis,2,立川市--国営昭和記念公園 (Tachikawa--Showa Memorial Park),JP-13,04 Jun 2023,L957598,S168856674,,1
+111,29620,species,小太平鸟,Bombycilla japonica,6,Kokumei Elementary School,JP-27,09 Mar 2023,L30679639,S168857443,,1
+112,21969,species,大山雀,Parus cinereus,1,豊中市--服部緑地 (Toyonaka--Hattori Greenbelt Park),JP-27,04 Mar 2023,L3109101,S168856811,,1
+113,7635,species,大白鹭,Ardea alba,1,豊中市--服部緑地 (Toyonaka--Hattori Greenbelt Park),JP-27,04 Mar 2023,L3109101,S168856811,,1
+114,7562,species,白鹭,Egretta garzetta,1,豊中市--服部緑地 (Toyonaka--Hattori Greenbelt Park),JP-27,04 Mar 2023,L3109101,S168856811,,1
+115,7313,species,普通鸬鹚,Phalacrocorax carbo,2,豊中市--服部緑地 (Toyonaka--Hattori Greenbelt Park),JP-27,04 Mar 2023,L3109101,S168856811,,1
+116,1985,species,山斑鸠,Streptopelia orientalis,2,豊中市--服部緑地 (Toyonaka--Hattori Greenbelt Park),JP-27,04 Mar 2023,L3109101,S168856811,,1
+117,31445,species,白鹡鸰,Motacilla alba,1,大阪市--大阪城公園 (Osaka--Osaka Castle Park),JP-27,26 Feb 2023,L1123077,S168857247,,1
+118,29382,species,蓝矶鸫,Monticola solitarius,1,大阪市--大阪城公園 (Osaka--Osaka Castle Park),JP-27,26 Feb 2023,L1123077,S168857247,,1
+119,29360,species,北红尾鸲,Phoenicurus auroreus,1,大阪市--大阪城公園 (Osaka--Osaka Castle Park),JP-27,26 Feb 2023,L1123077,S168857247,,1
+120,28424,species,白腹鸫,Turdus pallidus,1,大阪市--大阪城公園 (Osaka--Osaka Castle Park),JP-27,26 Feb 2023,L1123077,S168857247,,1
+121,21362,species,大嘴乌鸦/丛林鸦,Corvus macrorhynchos,,大阪市--大阪城公園 (Osaka--Osaka Castle Park),JP-27,26 Feb 2023,L1123077,S168857247,,1
+122,5430,species,白骨顶 (骨顶鸡),Fulica atra,2,大阪市--大阪城公園 (Osaka--Osaka Castle Park),JP-27,26 Feb 2023,L1123077,S168857247,,1
+123,662,species,凤头潜鸭,Aythya fuligula,,大阪市--大阪城公園 (Osaka--Osaka Castle Park),JP-27,26 Feb 2023,L1123077,S168857247,,1
+124,525,species,绿头鸭,Anas platyrhynchos,2,大阪市--大阪城公園 (Osaka--Osaka Castle Park),JP-27,26 Feb 2023,L1123077,S168857247,,1
+125,523,species,斑嘴鸭,Anas zonorhyncha,1,大阪市--大阪城公園 (Osaka--Osaka Castle Park),JP-27,26 Feb 2023,L1123077,S168857247,,1
+126,494,species,赤颈鸭,Mareca penelope,1,大阪市--大阪城公園 (Osaka--Osaka Castle Park),JP-27,26 Feb 2023,L1123077,S168857247,,1
+127,483,species,琵嘴鸭,Spatula clypeata,20,大阪市--大阪城公園 (Osaka--Osaka Castle Park),JP-27,26 Feb 2023,L1123077,S168857247,,1
+75,542,hybrid,绿头鸭x斑嘴鸭 (杂交),Anas platyrhynchos x zonorhyncha,1,練馬区--石神井公園 (Nerima Ward--Shakujii Park),JP-13,10 Dec 2023,L4949205,S156058490,,0
+5,6291,spuh,未识别的鸻鹬类,Charadriiformes sp. (shorebird sp.),1,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,27 Apr 2025,L1896754,S229851953,,0
+14,6171,spuh,未识别的小型滨鹬,Calidris sp. (peep sp.),20,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,04 Jan 2025,L1896754,S207914594,,0
+15,5971,slash,大杓鹬/白腰杓鹬,Numenius madagascariensis/arquata,2,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,04 Jan 2025,L1896754,S207914594,,0
+73,28518,slash,斑鸫/红尾斑鸫,Turdus eunomus/naumanni,1,練馬区--石神井公園 (Nerima Ward--Shakujii Park),JP-13,10 Dec 2023,L4949205,S156058490,,0
+86,6477,slash,织女银鸥/蒙古银鸥 (西伯利亚银鸥),Larus vegae/mongolicus,,船橋市--ふなばし三番瀬海浜公園 (Funabashi--Funabashi Sanbanze Seaside Park),JP-12,14 Oct 2023,L1484347,S152135322,,0
 0,,,金眶鸻,Charadrius dubius,,,,,,,,
 0,,,红领绿鹦鹉,Psittacula krameri manillensis,,,,,,,,
