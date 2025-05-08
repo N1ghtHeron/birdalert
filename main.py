@@ -486,20 +486,16 @@ def commit_generated_file(file_path, commit_message):
     注意：在 GitHub Actions 下需要使用 TOKEN 来设置推送 URL，否则会出现权限错误。
     """
     try:
-        # 从环境变量中获取 GitHub TOKEN 以及仓库全名（例如 "N1ghtHeron/birdalert"）
         token = os.environ.get("TOKEN")
         repo_name = os.environ.get("REPO")
         if token and repo_name:
-            # 配置带 Token 的远程地址
             remote_url = f"https://{token}@github.com/{repo_name}.git"
             subprocess.check_call(["git", "remote", "set-url", "origin", remote_url])
         else:
             print("缺少 TOKEN 或 REPO 环境变量，无法更新 remote URL。")
-
-        # 配置提交用户信息
+        
         subprocess.check_call(["git", "config", "--global", "user.email", "noctivagantheron@gmail.com"])
         subprocess.check_call(["git", "config", "--global", "user.name", "N1ghtHeron"])
-        # 添加文件并提交
         subprocess.check_call(["git", "add", file_path])
         subprocess.check_call(["git", "commit", "-m", commit_message])
         subprocess.check_call(["git", "push", "origin", "main"])

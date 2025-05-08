@@ -13,7 +13,7 @@ jobs:
   run-script:
     runs-on: ubuntu-latest
     env:
-      TOKEN: ${{ secrets.TOKEN }}
+      TOKEN: ${{ secrets.GITHUB_TOKEN }}
       REPO: ${{ secrets.REPO }}
       EBIRD_API_KEY: ${{ secrets.EBIRD_API_KEY }}
       LAT: ${{ secrets.LAT }}
