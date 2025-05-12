@@ -41,9 +41,9 @@ _Alert target bird species from Zoopicker and ebird_
   - 如果你的 auto alert 能成功运行并提交issue，则大功告成！
 
 ## ❓可能存在的问题
-### - 为什么输出包含了lifelist中的鸟种？
-ebird和zoopicker对同一鸟种采用了不同的拉丁文名称。zoopicker的拉丁文名称和wikipedia一致，请自行在lifelist中添加。
-
+### - 为什么输出包含了lifelist中的鸟种？/ 为什么输出的只有拉丁名？
+是因为ebird和zoopicker对 同一鸟种 采用了 不同的拉丁文名称。
+zoopicker使用的拉丁文名称和wikipedia一致，请自行在`ebird_world_life_list.csv`中添加。
 
 ---
 
