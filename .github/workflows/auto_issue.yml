@@ -2,7 +2,8 @@ name: auto alert
 
 on:
   schedule:
-    - cron: "0 20 * * *"   # UTC 20:00 -> 东9 5:00 github的action有延迟
+    - cron: "0 19 * * *"   # UTC 19:00 -> 东9 4:00 github的action有延迟
+    - cron: "0 1 * * *"    # UTC 01:00 -> 东9 10:00
     - cron: "0 8 * * *"    # UTC 08:00 -> 东9 17:00
   workflow_dispatch:
 
