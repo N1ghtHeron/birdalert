@@ -1,5 +1,6 @@
 ﻿Row #,Taxon Order,Category,Common Name,Scientific Name,Count,Location,S/P,Date,LocID,SubID,Exotic,Countable
-1,3379,species,小杜鹃,Cuculus poliocephalus,1,-,JP-13,25 May 2025,L31133920,S242445279,,1
+1,7499,species,黄苇鳽,Botaurus sinensis,1,川越市--伊佐沼・伊佐沼公園 (Kawagoe--Lake Isanuma and Isanuma Park),JP-11,01 Jun 2025,L2704124,S245312596,,1
+1,3379,species,小杜鹃,Cuculus poliocephalus,1,-,JP-13,25 May 2025,1,1,,1
 2,24704,species,库页岛柳莺,Phylloscopus borealoides,1,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,05 May 2025,L1896754,S233324188,,1
 3,6674,species,普通燕鸥,Sterna hirundo,1,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,05 May 2025,L1896754,S233324188,,1
 4,24641,species,冕柳莺,Phylloscopus coronatus,1,練馬区--石神井公園 (Nerima Ward--Shakujii Park),JP-13,04 May 2025,L4949205,S232788448,,1
