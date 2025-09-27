@@ -1,4 +1,15 @@
 ﻿Row #,Taxon Order,Category,Common Name,Scientific Name,Count,Location,S/P,Date,LocID,SubID,Exotic,Countable
+2,270,species,鸿雁,Anser cygnoides,10,浑河鸟岛 (Hun River Bird Island),CN-21,23 Sep 2025,L12748164,S274998074,,1
+3,264,species,灰雁,Anser anser,3,浑河鸟岛 (Hun River Bird Island),CN-21,23 Sep 2025,L12748164,S274998074,,1
+4,25378,species,红胁绣眼鸟,Zosterops erythropleurus,5,科普公园 (Kepu Park),CN-21,22 Sep 2025,L38650522,S274820264,,1
+5,21806,species,沼泽山雀,Poecile palustris,1,科普公园 (Kepu Park),CN-21,22 Sep 2025,L38650522,S274820264,,1
+6,11540,species,灰头绿啄木鸟,Picus canus,1,科普公园 (Kepu Park),CN-21,22 Sep 2025,L38650522,S274820264,,1
+7,11205,species,棕腹啄木鸟,Dendrocopos hyperythrus,1,科普公园 (Kepu Park),CN-21,22 Sep 2025,L38650522,S274820264,,1
+8,7492,species,紫背苇鳽,Botaurus eurhythmus,1,和平体育公园,CN-21,20 Sep 2025,L53042896,S274394092,,1
+9,24571,species,黄眉柳莺,Phylloscopus inornatus,3,"沈阳南湖公园 (Nanhu Park, Shenyang)",CN-21,20 Sep 2025,L38650411,S274351336,,1
+10,21242,species,喜鹊,Pica serica,10,沈水湾公园 (Shenshuiwan Park),CN-21,19 Sep 2025,L38650526,S274151870,,1
+11,11236,species,大斑啄木鸟,Dendrocopos major,1,沈水湾公园 (Shenshuiwan Park),CN-21,19 Sep 2025,L38650526,S274151870,,1
+12,6654,species,白翅浮鸥,Chlidonias leucopterus,2,沈水湾公园 (Shenshuiwan Park),CN-21,19 Sep 2025,L38650526,S274151870,,1
 1,7499,species,黄苇鳽,Botaurus sinensis,1,川越市--伊佐沼・伊佐沼公園 (Kawagoe--Lake Isanuma and Isanuma Park),JP-11,01 Jun 2025,L2704124,S245312596,,1
 1,3379,species,小杜鹃,Cuculus poliocephalus,1,-,JP-13,25 May 2025,1,1,,1
 2,24704,species,库页岛柳莺,Phylloscopus borealoides,1,江戸川区--葛西臨海公園・葛西海浜公園 (Edogawa Ward--Kasai Rinkai Park / Kasai Kaihin Park),JP-13,05 May 2025,L1896754,S233324188,,1
