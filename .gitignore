@@ -5,6 +5,7 @@ data/ebird_taxonomy_en.json
 data/ebird_taxonomy_ja.json
 data/ebird_taxonomy_zh_SIM.json
 data/Avibase_Tokyo.csv
+export
 temp.txt
 .ipynb_checkpoints
 __pycache__
