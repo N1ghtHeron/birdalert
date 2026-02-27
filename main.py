@@ -19,8 +19,8 @@ import json
 import time  # 引入time用于API请求间隔，避免速率限制
 
 # TODO：----------------------- local debug ----------------------------
-from dotenv import load_dotenv
-load_dotenv()
+# from dotenv import load_dotenv
+# load_dotenv()
 # ----------------------- 全局配置 ----------------------------
 num_days = 3  # 最近几天数据
 ebird_token = os.getenv("EBIRD_API_KEY")  # eBird API Token
@@ -357,13 +357,13 @@ def create_github_issue(body, date_str):
 # ----------------------- Main ----------------------------
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    # parser.add_argument("--mode", choices=["generate", "create-issue"], required=True,
-    #                     help="运行模式")
+    parser.add_argument("--mode", choices=["generate", "create-issue"], required=True,
+                        help="运行模式")
 
     # TODO：----------------------- local debug 则改成 ----------------------------
-    parser.add_argument("--mode", choices=["generate", "create-issue"],
-                        default="generate",  # 设置默认模式
-                        help="运行模式: generate(生成 Markdown), create-issue(根据 Markdown 创建 GitHub Issue)")
+    # parser.add_argument("--mode", choices=["generate", "create-issue"],
+    #                     default="generate",  # 设置默认模式
+    #                     help="运行模式: generate(生成 Markdown), create-issue(根据 Markdown 创建 GitHub Issue)")
 
     args = parser.parse_args()
     date_str = datetime.datetime.utcnow().strftime("%Y-%m-%d")
