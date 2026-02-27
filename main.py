@@ -19,8 +19,8 @@ import json
 import time  # 引入time用于API请求间隔，避免速率限制
 
 # TODO：----------------------- local debug ----------------------------
-# from dotenv import load_dotenv
-# load_dotenv()
+from dotenv import load_dotenv
+load_dotenv()
 # ----------------------- 全局配置 ----------------------------
 num_days = 3  # 最近几天数据
 ebird_token = os.getenv("EBIRD_API_KEY")  # eBird API Token
@@ -133,6 +133,7 @@ def load_locations(csv_file):
                 continue
             locs.append({
                 "url": f"https://zoopicker.com/places/{pid}/watcheds",
+                "place_url": f"https://zoopicker.com/places/{pid}",
                 "location": row[1].strip() if len(row) > 1 else ""
             })
     return locs
@@ -217,6 +218,8 @@ def fetch_ebird_data(library_set):
             count = obs.get("howMany", 1)  # 有些记录可能没有数量，默认为1
             if count is None: count = 1
             loc = obs.get("locName", "").strip()
+            checklist_id = obs.get("subId", "").strip()
+            checklist_url = f"https://ebird.org/checklist/{checklist_id}" if checklist_id else ""
 
             if formatted_date not in aggregated:
                 aggregated[formatted_date] = {}
@@ -225,8 +228,8 @@ def fetch_ebird_data(library_set):
 
             aggregated[formatted_date][sci]["total"] += count
 
-            # 聚合地点：同一天、同物种、同地点 累加数量
-            key = (loc, "ebird")
+            # 聚合地点：eBird 记录保留 checklist URL，避免同地点不同清单被合并丢失链接
+            key = (loc, "ebird", checklist_url)
             aggregated[formatted_date][sci]["locations"][key] = aggregated[formatted_date][sci]["locations"].get(key,
                                                                                                                  0) + count
 
@@ -277,7 +280,7 @@ def generate_markdown():
                 if sci not in aggregated[out_date]:
                     aggregated[out_date][sci] = {"total": 0, "locations": {}}
                 aggregated[out_date][sci]["total"] += 1
-                key = (loc["location"], "zoopicker")
+                key = (loc["location"], "zoopicker", loc["place_url"])
                 aggregated[out_date][sci]["locations"][key] = aggregated[out_date][sci]["locations"].get(key, 0) + 1
 
     # 聚合 eBird 数据（修改点：传入 library 用于内部筛选和二次查询）
@@ -313,8 +316,16 @@ def generate_markdown():
                 title_name = f"{cn}，{jp}，{sci}" if cn else f"{sci} (No CN name)"
                 lines.append(f"\n### {title_name} ({total})")
 
-                for (loc, source), cnt in sorted(data["locations"].items()):
-                    lines.append(f"- {loc} ({cnt}, {source})")
+                for key, cnt in sorted(data["locations"].items()):
+                    # 统一按 (loc, source, url) 输出；兼容旧数据的 (loc, source)
+                    if len(key) == 3:
+                        loc, source, source_url = key
+                    else:
+                        loc, source = key
+                        source_url = ""
+
+                    loc_text = f"[{loc}]({source_url})" if source_url else loc
+                    lines.append(f"- {loc_text} ({cnt}, {source})")
     return "\n".join(lines)
 
 
@@ -346,13 +357,13 @@ def create_github_issue(body, date_str):
 # ----------------------- Main ----------------------------
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--mode", choices=["generate", "create-issue"], required=True,
-                        help="运行模式")
+    # parser.add_argument("--mode", choices=["generate", "create-issue"], required=True,
+    #                     help="运行模式")
 
     # TODO：----------------------- local debug 则改成 ----------------------------
-    # parser.add_argument("--mode", choices=["generate", "create-issue"],
-    #                     default="generate",  # 设置默认模式
-    #                     help="运行模式: generate(生成 Markdown), create-issue(根据 Markdown 创建 GitHub Issue)")
+    parser.add_argument("--mode", choices=["generate", "create-issue"],
+                        default="generate",  # 设置默认模式
+                        help="运行模式: generate(生成 Markdown), create-issue(根据 Markdown 创建 GitHub Issue)")
 
     args = parser.parse_args()
     date_str = datetime.datetime.utcnow().strftime("%Y-%m-%d")
