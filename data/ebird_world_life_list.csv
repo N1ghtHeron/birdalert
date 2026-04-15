@@ -1,163 +1,160 @@
-Row #,Taxon Order,Category,Common Name,Scientific Name,Count,Location,S/P,Date,LocID,SubID,Exotic,Countable
-1,28590,species,赤胸鸫,Turdus chrysolaus,1,,JP-13,29 Mar 2026,L39572111,S314196034,,1
-1,32091,species,锡嘴雀,Coccothraustes coccothraustes,1,,JP-14,01 Mar 2026,L21956215,S304827768,,1
-2,21339,species,松鸦,Garrulus glandarius,1,,JP-14,01 Mar 2026,L21956215,S304827768,,1
-3,673,species,环颈潜鸭,Aythya collaris,1,,JP-14,01 Mar 2026,L21956215,S304827768,,1
-1,18637,species,琉球山椒鸟,Pericrocotus tegimae,1,,JP-13,22 Feb 26,L1896754,S302892306,,1
-1,29555,species,红胸姬鹟,Ficedula parva,1,,JP-13,21 Feb 2026,L1896754,S302591324,,1
-2,6460,species,黑嘴鸥,Saundersilarus saundersi,1,,JP-13,21 Feb 2026,L1896754,S302591324,,1
-3,737,species,黑海番鸭,Melanitta americana,2,,JP-13,21 Feb 2026,L1896754,S302591324,,1
-2,683,hybrid,白眼潜鸭x青头潜鸭 (杂交),Aythya nyroca x baeri,1,,JP-14,14 Feb 2026,L4099598,S300249692,,0
-1,31882,species,黄腹鹨,Anthus japonicus,2,,JP-14,14 Feb 2026,L4099598,S300249692,,1
-3,287,species,白额雁,Anser albifrons,1,,JP-14,14 Feb 2026,L4099598,S300249692,,1
-1,5854,species,长嘴剑鸻,Thinornis placidus,3,,JP-13,18-Jan-26,L27713458,S294850730,,1
-2,743,species,鹊鸭,Bucephala clangula,3,,JP-13,18-Jan-26,L27713458,S294850730,,1
-1,517,species,绿眉鸭,Mareca americana,2,,JP-13,9-Nov-25,L8299643,S283616104,,1
-2,299,species,小白额雁,Anser erythropus,1,,JP-11,8-Nov-25,L4200926,S283396243,,1
-3,6042,species,黑尾塍鹬,Limosa limosa,2,,JP-11,12-Oct-25,L2704124,S278813648,,1
-1,737,species,普通秋沙鸭,Mergus merganser,1,,JP-14,28-Sep-25,L6669771,S275949762,,1
-2,270,species,鸿雁,Anser cygnoides,10,,CN-21,23-Sep-25,L12748164,S274998074,,1
-3,264,species,灰雁,Anser anser,3,,CN-21,23-Sep-25,L12748164,S274998074,,1
-4,25378,species,红胁绣眼鸟,Zosterops erythropleurus,5,,CN-21,22-Sep-25,L38650522,S274820264,,1
-5,21806,species,沼泽山雀,Poecile palustris,1,,CN-21,22-Sep-25,L38650522,S274820264,,1
-6,11540,species,灰头绿啄木鸟,Picus canus,1,,CN-21,22-Sep-25,L38650522,S274820264,,1
-7,11205,species,棕腹啄木鸟,Dendrocopos hyperythrus,1,,CN-21,22-Sep-25,L38650522,S274820264,,1
-8,7492,species,紫背苇鳽,Botaurus eurhythmus,1,,CN-21,20-Sep-25,L53042896,S274394092,,1
-9,24571,species,黄眉柳莺,Phylloscopus inornatus,3,,CN-21,20-Sep-25,L38650411,S274351336,,1
-10,21242,species,喜鹊,Pica serica,10,,CN-21,19-Sep-25,L38650526,S274151870,,1
-11,11236,species,大斑啄木鸟,Dendrocopos major,1,,CN-21,19-Sep-25,L38650526,S274151870,,1
-12,6654,species,白翅浮鸥,Chlidonias leucopterus,2,,CN-21,19-Sep-25,L38650526,S274151870,,1
-1,7499,species,黄苇鳽,Botaurus sinensis,1,,JP-11,1-Jun-25,L2704124,S245312596,,1
-1,3379,species,小杜鹃,Cuculus poliocephalus,1,,JP-13,25-May-25,1,1,,1
-2,24704,species,库页岛柳莺,Phylloscopus borealoides,1,,JP-13,5-May-25,L1896754,S233324188,,1
-3,6674,species,普通燕鸥,Sterna hirundo,1,,JP-13,5-May-25,L1896754,S233324188,,1
-4,24641,species,冕柳莺,Phylloscopus coronatus,1,,JP-13,4-May-25,L4949205,S232788448,,1
-5,6646,species,须浮鸥,Chlidonias hybrida,1,,JP-11,3-May-25,L2704124,S232275498,,1
-7,6115,species,流苏鹬,Calidris pugnax,1,,JP-11,12-Apr-25,L2704124,S224749199,,1
-8,6088,species,鹤鹬,Tringa erythropus,2,,JP-11,12-Apr-25,L2704124,S224749199,,1
-9,6001,species,长嘴半蹼鹬 (长嘴鹬),Limnodromus scolopaceus,2,,JP-11,12-Apr-25,L2704124,S224749199,,1
-10,1582,species,灰胸竹鸡,Bambusicola thoracicus,1,,JP-13,6-Apr-25,L936667,S223295822,N,1
-11,1476,species,绿雉,Phasianus versicolor,1,,JP-13,6-Apr-25,L936667,S223295822,,1
-12,28515,species,红尾斑鸫,Turdus naumanni,1,,JP-13,30-Mar-25,L10100332,S221703592,,1
-13,5521,species,红胸田鸡,Zapornia fusca,1,,JP-13,23-Mar-25,L1896754,S220141368,,1
-14,8150,species,雀鹰,Accipiter nisus,1,,JP-13,5-Jan-25,L927941,S208076865,,1
-17,745,species,红胸秋沙鸭,Mergus serrator,1,,JP-13,4-Jan-25,L1896754,S207914594,,1
-18,11997,species,游隼,Falco peregrinus,1,,JP-13,22-Dec-24,L1896754,S206155523,,1
-19,727,species,斑头秋沙鸭 (白秋沙鸭),Mergellus albellus,5,,JP-11,15-Dec-24,L4200926,S205438793,,1
-20,31824,species,黑头蜡嘴雀,Eophona personata,4,,JP-13,14-Dec-24,L27855031,S205309826,,1
-21,8470,species,普通鵟,Buteo japonicus,1,,JP-13,8-Dec-24,L927941,S204782907,,1
-22,7737,species,鹗,Pandion haliaetus,1,,JP-13,8-Dec-24,L927941,S204782907,,1
-23,461,species,花脸鸭,Sibirionetta formosa,1,,JP-13,7-Dec-24,L3123792,S204664503,,1
-24,7322,species,暗绿背鸬鹚,Phalacrocorax capillatus,1,,JP-13,17-Nov-24,L1896754,S202741977,,1
-25,11539,species,Japanese Green Woodpecker,Picus awokera,1,,JP-13,10-Nov-24,L7024290,S201966508,,1
-26,6532,species,灰背鸥,Larus schistisagus,1,,JP-12,3-Nov-24,L1484347,S201204750,,1
-27,6474,species,织女银鸥,Larus vegae,,,JP-12,3-Nov-24,L1484347,S201204750,,1
-28,6062,species,翘嘴鹬,Xenus cinereus,1,,JP-12,3-Nov-24,L1484347,S201204750,,1
-29,10894,species,蚁䴕,Jynx torquilla,1,,JP-13,27-Oct-24,L1896754,S200407019,,1
-30,5706,species,黑翅长脚鹬,Himantopus himantopus,15,,JP-11,15-Oct-24,L2704124,S198962622,,1
-31,491,species,罗纹鸭,Mareca falcata,5,,JP-13,14-Oct-24,L2055415,S198826672,,1
-32,365,species,疣鼻天鹅,Cygnus olor,1,,JP-13,14-Oct-24,L2055415,S198826672,N,1
-33,11878,species,红隼,Falco tinnunculus,1,,JP-14,13-Oct-24,L6669771,S198653634,,1
-34,6124,species,红颈滨鹬,Calidris ruficollis,1,,JP-12,17-Sep-24,L1484347,S195425437,,1
-35,6103,species,大滨鹬,Calidris tenuirostris,3,,JP-12,17-Sep-24,L1484347,S195425437,,1
-36,7643,species,中白鹭,Ardea intermedia,2,,JP-13,6-Aug-24,L1896754,S190405535,,1
-37,7556,species,黄嘴白鹭,Egretta eulophotes,1,,JP-13,6-Aug-24,L1896754,S190405535,,1
-38,23300,species,棕扇尾莺,Cisticola juncidis,1,,JP-13,15-Jun-24,L3812816,S181538458,,1
-39,22389,species,云雀,Alauda arvensis,1,,JP-13,7-May-24,L3812816,S172555592,,1
-40,23484,species,东方大苇莺,Acrocephalus orientalis,1,,JP-13,6-May-24,L1896754,S172345257,,1
-41,7443,species,黑脸琵鹭,Platalea minor,1,,JP-13,6-May-24,L1896754,S172345257,,1
-42,6076,species,红脚鹬,Tringa totanus,1,,JP-13,6-May-24,L1896754,S172345257,,1
-43,23990,species,烟腹毛脚燕,Delichon dasypus,3,,JP-13,5-May-24,L5234698,S172074487,,1
-44,7581,species,绿鹭,Butorides striata,2,,JP-13,5-May-24,L5234698,S172074487,,1
-45,29234,species,黄眉姬鹟,Ficedula narcissina,1,,JP-13,4-May-24,L7004676,S171819734,,1
-46,6099,species,翻石鹬,Arenaria interpres,21,,JP-13,29-Apr-24,L1896754,S170899950,,1
-47,5964,species,大杓鹬,Numenius madagascariensis,1,,JP-13,29-Apr-24,L1896754,S170899950,,1
-48,6609,species,白额燕鸥,Sternula albifrons,2,,JP-12,28-Apr-24,L1484347,S170661664,,1
-49,6090,species,青脚鹬,Tringa nebularia,1,,JP-12,28-Apr-24,L1484347,S170661664,,1
-50,5973,species,斑尾塍鹬,Limosa lapponica,,,JP-12,28-Apr-24,L1484347,S170661664,,1
-51,5847,species,蒙古沙鸻,Anarhynchus mongolus,7,,JP-12,28-Apr-24,L1484347,S170661664,,1
-52,5951,species,中杓鹬,Numenius phaeopus,2,,JP-13,27-Apr-24,L927941,S170461984,,1
-53,4089,species,小白腰雨燕,Apus nipalensis,8,,JP-13,27-Apr-24,L927941,S170461984,,1
-54,5405,species,黑水鸡,Gallinula chloropus,1,,JP-13,20-Apr-24,L3812816,S169395914,,1
-55,8188,species,苍鹰,Astur gentilis,1,,JP-13,14-Apr-24,L3812816,S168513884,,1
-56,5787,species,金眶鸻,Thinornis dubius,2,,JP-13,14-Apr-24,L3812816,S168513884,,1
-57,23957,species,家燕,Hirundo rustica,1,,JP-13,2-Apr-24,L4949205,S166907829,,1
-58,32556,species,日本灰头鹀,Emberiza personata,2,,JP-13,16-Mar-24,L1896754,S164979190,,1
-59,32524,species,芦鹀,Emberiza schoeniclus,4,,JP-13,16-Mar-24,L1896754,S164979190,,1
-60,24920,species,日本树莺,Horornis diphone,1,,JP-13,16-Mar-24,L1896754,S164979190,,1
-61,6797,species,黑颈䴙䴘,Podiceps nigricollis,1,,JP-13,16-Mar-24,L1896754,S164979190,,1
-62,5966,species,白腰杓鹬,Numenius arquata,2,,JP-13,16-Mar-24,L1896754,S164979190,,1
-63,487,species,赤膀鸭,Mareca strepera,2,,JP-13,16-Mar-24,L1896754,S164979190,,1
-64,32067,species,金翅雀,Chloris sinica,4,,JP-13,10-Mar-24,L7024290,S164279051,,1
-65,21786,species,杂色山雀,Sittiparus varius,1,,JP-13,9-Mar-24,L1416996,S164166975,,1
-66,20811,species,牛头伯劳,Lanius bucephalus,2,,JP-13,9-Mar-24,L1416996,S164166975,,1
-67,443,species,鸳鸯,Aix galericulata,13,,JP-13,9-Mar-24,L1416996,S164166975,,1
-68,28514,species,斑鸫,Turdus eunomus,1,,JP-12,16-Feb-24,L1484347,S161623266,,1
-69,6127,species,三趾滨鹬,Calidris alba,,,JP-12,16-Feb-24,L1484347,S161623266,,1
-70,9130,species,长尾林鸮/四川林鸮,Strix uralensis,1,,JP-13,26-Dec-23,L1966910,S157128314,,1
-71,7513,species,夜鹭,Nycticorax nycticorax,2,,JP-13,23-Dec-23,L1525454,S156902913,,1
-72,6409,species,红嘴鸥,Chroicocephalus ridibundus,,,JP-13,13-Dec-23,L920941,S156230571,,1
-73,645,species,红头潜鸭,Aythya ferina,1,,JP-13,13-Dec-23,L920941,S156230571,,1
-75,8064,species,日本松雀鹰,Tachyspiza gularis,1,,JP-13,10-Dec-23,L4949205,S156058490,,1
-77,6787,species,角䴙䴘,Podiceps auritus,2,,JP-13,2-Dec-23,L1896754,S155595082,,1
-78,32442,species,三道眉草鹀,Emberiza cioides,4,,JP-13,18-Nov-23,L957598,S154658963,,1
-79,8249,species,黑鸢,Milvus migrans,1,,JP-12,14-Nov-23,L1484347,S154888070,,1
-80,6793,species,凤头䴙䴘,Podiceps cristatus,1,,JP-12,14-Nov-23,L1484347,S154888070,,1
-81,669,species,斑背潜鸭,Aythya marila,,,JP-12,14-Nov-23,L1484347,S154888070,,1
-82,5729,species,蛎鹬,Haematopus ostralegus,,,JP-12,29-Oct-23,L1484347,S153391008,,1
-83,31441,species,日本鹡鸰,Motacilla grandis,1,,JP-14,17-Oct-23,L6669771,S152448374,,1
-84,31403,species,灰鹡鸰,Motacilla cinerea,1,,JP-14,17-Oct-23,L6669771,S152448374,,1
-85,27616,species,灰椋鸟,Spodiopsar cineraceus,,,JP-14,17-Oct-23,L6669771,S152448374,,1
-86,21351,species,小嘴乌鸦,Corvus corone,,,JP-14,17-Oct-23,L6669771,S152448374,,1
-88,6444,species,黑尾鸥,Larus crassirostris,,,JP-12,14-Oct-23,L1484347,S152135322,,1
-89,6130,species,黑腹滨鹬,Calidris alpina,,,JP-12,14-Oct-23,L1484347,S152135322,,1
-90,5893,species,环颈鸻,Anarhynchus alexandrinus,,,JP-12,14-Oct-23,L1484347,S152135322,,1
-91,5754,species,灰斑鸻,Pluvialis squatarola,,,JP-12,14-Oct-23,L1484347,S152135322,,1
-92,28531,species,北灰鹟,Muscicapa dauurica,1,,JP-13,14-Oct-23,L7024293,S152125443,,1
-93,28522,species,灰纹鹟,Muscicapa griseisticta,1,,JP-13,14-Oct-23,L7024293,S152125443,,1
-94,25390,species,日本绣眼鸟,Zosterops japonicus,1,,JP-12,13-Oct-23,L1743720,S152058561,,1
-95,21167,species,灰喜鹊,Cyanopica cyanus,3,,JP-12,13-Oct-23,L1743720,S152058421,,1
-96,6063,species,矶鹬,Actitis hypoleucos,2,,JP-13,6-Oct-23,L927941,S151521358,,1
-97,6037,species,扇尾沙锥,Gallinago gallinago,1,,JP-13,6-Oct-23,L927941,S151521358,,1
-98,588,species,绿翅鸭/美洲绿翅鸭,Anas crecca,18,,JP-13,6-Oct-23,L927941,S151521358,,1
-99,18440,species,灰山椒鸟,Pericrocotus divaricatus,1,,JP-13,6-Oct-23,L927941,S151540232,,1
-100,31329,species,麻雀 (树麻雀),Passer montanus,14,,JP-13,3-Oct-23,L920941,S151315321,,1
-101,24975,species,北长尾山雀,Aegithalos caudatus,1,,JP-13,3-Oct-23,L920941,S151315321,,1
-102,571,species,针尾鸭,Anas acuta,3,,JP-13,3-Oct-23,L920941,S151315321,,1
-103,7651,species,苍鹭,Ardea cinerea,1,,JP-13,1-Oct-23,L18934173,S151144616,,1
-104,24339,species,栗耳短脚鹎,Hypsipetes amaurotis,1,,JP-13,1-Oct-23,L22120018,S151141598,,1
-105,12232,species,红领绿鹦鹉,Psittacula krameri,8,,JP-13,1-Oct-23,L1525454,S151140110,N,1
-106,1817,species,原鸽,Columba livia,2,,JP-13,1-Oct-23,L1525454,S151140110,N,1
-107,9809,species,普通翠鸟,Alcedo atthis,2,,JP-13,1-Oct-23,L1525454,S151138869,,1
-108,11138,species,小星头啄木鸟,Yungipicus kizuki,1,,JP-13,24-Sep-23,L7024293,S151054557,,1
-109,6071,species,灰尾漂鹬,Tringa brevipes,1,,JP-13,27-Aug-23,L23838625,S151710306,,1
-110,26461,species,画眉,Garrulax canorus,1,,JP-13,4-Jun-23,L957598,S168856674,N,1
-111,6749,species,小䴙䴘,Tachybaptus ruficollis,2,,JP-13,4-Jun-23,L957598,S168856674,,1
-112,29620,species,小太平鸟,Bombycilla japonica,6,,JP-27,9-Mar-23,L30679639,S168857443,,1
-113,21969,species,大山雀,Parus cinereus,1,,JP-27,4-Mar-23,L3109101,S168856811,,1
-114,7635,species,大白鹭,Ardea alba,1,,JP-27,4-Mar-23,L3109101,S168856811,,1
-115,7562,species,白鹭,Egretta garzetta,1,,JP-27,4-Mar-23,L3109101,S168856811,,1
-116,7313,species,普通鸬鹚,Phalacrocorax carbo,2,,JP-27,4-Mar-23,L3109101,S168856811,,1
-117,1985,species,山斑鸠,Streptopelia orientalis,2,,JP-27,4-Mar-23,L3109101,S168856811,,1
-118,31445,species,白鹡鸰,Motacilla alba,1,,JP-27,26-Feb-23,L1123077,S168857247,,1
-119,29382,species,蓝矶鸫,Monticola solitarius,1,,JP-27,26-Feb-23,L1123077,S168857247,,1
-120,29360,species,北红尾鸲,Phoenicurus auroreus,1,,JP-27,26-Feb-23,L1123077,S168857247,,1
-121,28424,species,白腹鸫,Turdus pallidus,1,,JP-27,26-Feb-23,L1123077,S168857247,,1
-122,21362,species,大嘴乌鸦/丛林鸦,Corvus macrorhynchos,,,JP-27,26-Feb-23,L1123077,S168857247,,1
-123,5430,species,白骨顶 (骨顶鸡),Fulica atra,2,,JP-27,26-Feb-23,L1123077,S168857247,,1
-124,662,species,凤头潜鸭,Aythya fuligula,,,JP-27,26-Feb-23,L1123077,S168857247,,1
-125,525,species,绿头鸭,Anas platyrhynchos,2,,JP-27,26-Feb-23,L1123077,S168857247,,1
-126,523,species,斑嘴鸭,Anas zonorhyncha,1,,JP-27,26-Feb-23,L1123077,S168857247,,1
-127,494,species,赤颈鸭,Mareca penelope,1,,JP-27,26-Feb-23,L1123077,S168857247,,1
-128,483,species,琵嘴鸭,Spatula clypeata,20,,JP-27,26-Feb-23,L1123077,S168857247,,1
-76,542,hybrid,绿头鸭x斑嘴鸭 (杂交),Anas platyrhynchos x zonorhyncha,1,,JP-13,10-Dec-23,L4949205,S156058490,,0
-6,6291,spuh,未识别的鸻鹬类,Charadriiformes sp. (shorebird sp.),1,,JP-13,27-Apr-25,L1896754,S229851953,,0
-15,6171,spuh,未识别的小型滨鹬,Calidris sp. (peep sp.),20,,JP-13,4-Jan-25,L1896754,S207914594,,0
-16,5971,slash,大杓鹬/白腰杓鹬,Numenius madagascariensis/arquata,2,,JP-13,4-Jan-25,L1896754,S207914594,,0
-74,28518,slash,斑鸫/红尾斑鸫,Turdus eunomus/naumanni,1,,JP-13,10-Dec-23,L4949205,S156058490,,0
-87,6477,slash,织女银鸥/蒙古银鸥 (西伯利亚银鸥),Larus vegae/mongolicus,,,JP-12,14-Oct-23,L1484347,S152135322,,0
-0,,,金眶鸻,Charadrius dubius,,,,,,,,
-0,,,红领绿鹦鹉,Psittacula krameri manillensis,,,,,,,,
-0,,,绿鹭,Butorides atricapilla,,,,,,,,
-0,,,斑嘴鸭x绿头鸭,Anas zonorhyncha x platyrhynchos,,,,,,,,
-0,,,长嘴剑鸻,Charadrius placidus,,,,,,,,
+139,11249,species,小星头啄木鸟,Yungipicus kizuki,1,,JP-13,24 Sep 2023,,,,1
+138,9912,species,普通翠鸟,Alcedo atthis,2,,JP-13,01 Oct 2023,,,,1
+136,12350,species,红领绿鹦鹉,Psittacula krameri,8,,JP-13,01 Oct 2023,,,N,1
+137,1853,species,原鸽,Columba livia,2,,JP-13,01 Oct 2023,,,N,1
+135,24569,species,栗耳短脚鹎,Hypsipetes amaurotis,1,,JP-13,01 Oct 2023,,,,1
+134,7745,species,苍鹭,Ardea cinerea,1,,JP-13,01 Oct 2023,,,,1
+131,31603,species,麻雀 (树麻雀),Passer montanus,14,,JP-13,03 Oct 2023,,,,1
+132,25209,species,北长尾山雀,Aegithalos caudatus,1,,JP-13,03 Oct 2023,,,,1
+133,594,species,针尾鸭,Anas acuta,3,,JP-13,03 Oct 2023,,,,1
+127,6125,species,矶鹬,Actitis hypoleucos,2,,JP-13,06 Oct 2023,,,,1
+128,6099,species,扇尾沙锥,Gallinago gallinago,1,,JP-13,06 Oct 2023,,,,1
+129,612,species,绿翅鸭,Anas crecca,18,,JP-13,06 Oct 2023,,,,1
+130,18638,species,灰山椒鸟,Pericrocotus divaricatus,1,,JP-13,06 Oct 2023,,,,1
+140,6133,species,灰尾漂鹬,Tringa brevipes,1,,JP-13,27 Aug 2023,,,,1
+126,21391,species,灰喜鹊,Cyanopica cyanus,3,,JP-12,13 Oct 2023,,,,1
+125,25630,species,日本绣眼鸟,Zosterops japonicus,1,,JP-12,13 Oct 2023,,,,1
+123,28790,species,北灰鹟,Muscicapa dauurica,1,,JP-13,14 Oct 2023,,,,1
+124,28781,species,灰纹鹟,Muscicapa griseisticta,1,,JP-13,14 Oct 2023,,,,1
+119,6510,species,黑尾鸥,Larus crassirostris,,,JP-12,14 Oct 2023,,,,1
+120,6192,species,黑腹滨鹬,Calidris alpina,,,JP-12,14 Oct 2023,,,,1
+121,5954,species,环颈鸻,Anarhynchus alexandrinus,,,JP-12,14 Oct 2023,,,,1
+122,5811,species,灰斑鸻,Pluvialis squatarola,,,JP-12,14 Oct 2023,,,,1
+118,6544,slash,织女银鸥/蒙古银鸥 (西伯利亚银鸥),Larus vegae/mongolicus,,,JP-12,14 Oct 2023,,,,0
+114,31716,species,日本鹡鸰,Motacilla grandis,1,,JP-14,17 Oct 2023,,,,1
+115,31678,species,灰鹡鸰,Motacilla cinerea,1,,JP-14,17 Oct 2023,,,,1
+116,27858,species,灰椋鸟,Spodiopsar cineraceus,,,JP-14,17 Oct 2023,,,,1
+117,21575,species,小嘴乌鸦,Corvus corone,,,JP-14,17 Oct 2023,,,,1
+113,5786,species,蛎鹬,Haematopus ostralegus,,,JP-12,29 Oct 2023,,,,1
+109,32724,species,三道眉草鹀,Emberiza cioides,4,,JP-13,18 Nov 2023,,,,1
+110,8345,species,黑鸢,Milvus migrans,1,,JP-12,14 Nov 2023,,,,1
+111,6872,species,凤头䴙䴘,Podiceps cristatus,1,,JP-12,14 Nov 2023,,,,1
+112,694,species,斑背潜鸭,Aythya marila,,,JP-12,14 Nov 2023,,,,1
+108,6866,species,角䴙䴘,Podiceps auritus,2,,JP-13,02 Dec 2023,,,,1
+106,8159,species,日本松雀鹰,Tachyspiza gularis,1,,JP-13,10 Dec 2023,,,,1
+107,563,hybrid,斑嘴鸭x绿头鸭 (杂交),Anas zonorhyncha x platyrhynchos,1,,JP-13,10 Dec 2023,,,,0
+105,28611,slash,斑鸫/红尾斑鸫,Turdus eunomus/naumanni,1,,JP-13,10 Dec 2023,,,,0
+103,6474,species,红嘴鸥,Chroicocephalus ridibundus,,,JP-13,13 Dec 2023,,,,1
+104,670,species,红头潜鸭,Aythya ferina,1,,JP-13,13 Dec 2023,,,,1
+102,7600,species,夜鹭,Nycticorax nycticorax,2,,JP-13,23 Dec 2023,,,,1
+101,9232,species,长尾林鸮,Strix uralensis,1,,JP-13,26 Dec 2023,,,,1
+99,28606,species,斑鸫,Turdus eunomus,1,,JP-12,16 Feb 2024,,,,1
+100,6189,species,三趾滨鹬,Calidris alba,,,JP-12,16 Feb 2024,,,,1
+96,22010,species,杂色山雀,Sittiparus varius,1,,JP-13,09 Mar 2024,,,,1
+97,21042,species,牛头伯劳,Lanius bucephalus,2,,JP-13,09 Mar 2024,,,,1
+98,457,species,鸳鸯,Aix galericulata,13,,JP-13,09 Mar 2024,,,,1
+95,32343,species,金翅雀,Chloris sinica,4,,JP-13,10 Mar 2024,,,,1
+89,32838,species,日本灰头鹀,Emberiza personata,2,,JP-13,16 Mar 2024,,,,1
+90,32806,species,芦鹀,Emberiza schoeniclus,4,,JP-13,16 Mar 2024,,,,1
+91,25154,species,日本树莺,Horornis diphone,1,,JP-13,16 Mar 2024,,,,1
+92,6876,species,黑颈䴙䴘,Podiceps nigricollis,1,,JP-13,16 Mar 2024,,,,1
+93,6026,species,白腰杓鹬,Numenius arquata,2,,JP-13,16 Mar 2024,,,,1
+94,505,species,赤膀鸭,Mareca strepera,2,,JP-13,16 Mar 2024,,,,1
+88,24187,species,家燕,Hirundo rustica,1,,JP-13,02 Apr 2024,,,,1
+86,8283,species,苍鹰,Astur gentilis,1,,JP-13,14 Apr 2024,,,,1
+87,5848,species,金眶鸻,Thinornis dubius,2,,JP-13,14 Apr 2024,,,,1
+141,26714,species,画眉,Garrulax canorus,1,,JP-13,04 Jun 2023,,,N,1
+142,6827,species,小䴙䴘,Tachybaptus ruficollis,2,,JP-13,04 Jun 2023,,,,1
+144,22193,species,大山雀,Parus cinereus,1,,JP-27,04 Mar 2023,,,,1
+145,7729,species,大白鹭,Ardea alba,1,,JP-27,04 Mar 2023,,,,1
+146,7650,species,白鹭,Egretta garzetta,1,,JP-27,04 Mar 2023,,,,1
+147,7397,species,普通鸬鹚,Phalacrocorax carbo,2,,JP-27,04 Mar 2023,,,,1
+148,2022,species,山斑鸠,Streptopelia orientalis,2,,JP-27,04 Mar 2023,,,,1
+149,31720,species,白鹡鸰,Motacilla alba,1,,JP-27,26 Feb 2023,,,,1
+150,29652,species,蓝矶鸫,Monticola solitarius,1,,JP-27,26 Feb 2023,,,,1
+151,29630,species,北红尾鸲,Phoenicurus auroreus,1,,JP-27,26 Feb 2023,,,,1
+152,28585,species,白腹鸫,Turdus pallidus,1,,JP-27,26 Feb 2023,,,,1
+153,21586,species,大嘴乌鸦,Corvus macrorhynchos,,,JP-27,26 Feb 2023,,,,1
+154,5487,species,白骨顶 (骨顶鸡),Fulica atra,2,,JP-27,26 Feb 2023,,,,1
+155,687,species,凤头潜鸭,Aythya fuligula,,,JP-27,26 Feb 2023,,,,1
+156,545,species,绿头鸭,Anas platyrhynchos,2,,JP-27,26 Feb 2023,,,,1
+157,543,species,斑嘴鸭,Anas zonorhyncha,1,,JP-27,26 Feb 2023,,,,1
+158,512,species,赤颈鸭,Mareca penelope,1,,JP-27,26 Feb 2023,,,,1
+159,501,species,琵嘴鸭,Spatula clypeata,20,,JP-27,26 Feb 2023,,,,1
+143,29891,species,小太平鸟,Bombycilla japonica,6,,JP-27,09 Mar 2023,,,,1
+85,5462,species,黑水鸡,Gallinula chloropus,1,,JP-13,20 Apr 2024,,,,1
+83,6012,species,中杓鹬,Numenius phaeopus,2,,JP-13,27 Apr 2024,,,,1
+84,4144,species,小白腰雨燕,Apus nipalensis,8,,JP-13,27 Apr 2024,,,,1
+79,6682,species,白额燕鸥,Sternula albifrons,2,,JP-12,28 Apr 2024,,,,1
+80,6152,species,青脚鹬,Tringa nebularia,1,,JP-12,28 Apr 2024,,,,1
+81,6033,species,斑尾塍鹬,Limosa lapponica,,,JP-12,28 Apr 2024,,,,1
+82,5908,species,蒙古沙鸻,Anarhynchus mongolus,7,,JP-12,28 Apr 2024,,,,1
+77,6161,species,翻石鹬,Arenaria interpres,21,,JP-13,29 Apr 2024,,,,1
+78,6024,species,大杓鹬,Numenius madagascariensis,1,,JP-13,29 Apr 2024,,,,1
+76,29500,species,黄眉姬鹟,Ficedula narcissina,1,,JP-13,04 May 2024,,,,1
+74,24220,species,烟腹毛脚燕,Delichon dasypus,3,,JP-13,05 May 2024,,,,1
+75,7673,species,绿鹭,Butorides atricapilla,2,,JP-13,05 May 2024,,,,1
+71,23712,species,东方大苇莺,Acrocephalus orientalis,1,,JP-13,06 May 2024,,,,1
+72,7530,species,黑脸琵鹭,Platalea minor,1,,JP-13,06 May 2024,,,,1
+73,6138,species,红脚鹬,Tringa totanus,1,,JP-13,06 May 2024,,,,1
+70,22615,species,云雀,Alauda arvensis,1,,JP-13,07 May 2024,,,,1
+69,23528,species,棕扇尾莺,Cisticola juncidis,1,,JP-13,15 Jun 2024,,,,1
+67,7737,species,中白鹭,Ardea intermedia,2,,JP-13,06 Aug 2024,,,,1
+68,7644,species,黄嘴白鹭,Egretta eulophotes,1,,JP-13,06 Aug 2024,,,,1
+65,6186,species,红颈滨鹬,Calidris ruficollis,1,,JP-12,17 Sep 2024,,,,1
+66,6165,species,大滨鹬,Calidris tenuirostris,3,,JP-12,17 Sep 2024,,,,1
+64,11993,species,红隼,Falco tinnunculus,1,,JP-14,13 Oct 2024,,,,1
+62,509,species,罗纹鸭,Mareca falcata,5,,JP-13,14 Oct 2024,,,,1
+63,377,species,疣鼻天鹅,Cygnus olor,1,,JP-13,14 Oct 2024,,,N,1
+61,5763,species,黑翅长脚鹬,Himantopus himantopus,15,,JP-11,15 Oct 2024,,,,1
+60,11003,species,蚁䴕,Jynx torquilla,1,,JP-13,27 Oct 2024,,,,1
+57,6602,species,灰背鸥,Larus schistisagus,1,,JP-12,03 Nov 2024,,,,1
+58,6541,species,织女银鸥,Larus vegae,,,JP-12,03 Nov 2024,,,,1
+59,6124,species,翘嘴鹬,Xenus cinereus,1,,JP-12,03 Nov 2024,,,,1
+56,11654,species,Japanese Green Woodpecker,Picus awokera,1,,JP-13,10 Nov 2024,,,,1
+55,7406,species,暗绿背鸬鹚,Phalacrocorax capillatus,1,,JP-13,17 Nov 2024,,,,1
+54,478,species,花脸鸭,Sibirionetta formosa,1,,JP-13,07 Dec 2024,,,,1
+52,8566,species,普通鵟,Buteo japonicus,1,,JP-13,08 Dec 2024,,,,1
+53,7832,species,鹗,Pandion haliaetus,1,,JP-13,08 Dec 2024,,,,1
+51,32100,species,黑头蜡嘴雀,Eophona personata,4,,JP-13,14 Dec 2024,,,,1
+50,752,species,斑头秋沙鸭 (白秋沙鸭),Mergellus albellus,5,,JP-11,15 Dec 2024,,,,1
+49,12114,species,游隼,Falco peregrinus,1,,JP-13,22 Dec 2024,,,,1
+48,770,species,红胸秋沙鸭,Mergus serrator,1,,JP-13,04 Jan 2025,,,,1
+46,6235,spuh,未识别的小型滨鹬,Calidris sp. (peep sp.),20,,JP-13,04 Jan 2025,,,,0
+47,6031,slash,大杓鹬/白腰杓鹬,Numenius madagascariensis/arquata,2,,JP-13,04 Jan 2025,,,,0
+45,8245,species,雀鹰,Accipiter nisus,1,,JP-13,05 Jan 2025,,,,1
+44,5578,species,红胸田鸡,Zapornia fusca,1,,JP-13,23 Mar 2025,,,,1
+43,28607,species,红尾斑鸫,Turdus naumanni,1,,JP-13,30 Mar 2025,,,,1
+41,1616,species,灰胸竹鸡,Bambusicola thoracicus,1,,JP-13,06 Apr 2025,,,N,1
+42,1509,species,绿雉,Phasianus versicolor,1,,JP-13,06 Apr 2025,,,,1
+38,6177,species,流苏鹬,Calidris pugnax,1,,JP-11,12 Apr 2025,,,,1
+39,6150,species,鹤鹬,Tringa erythropus,2,,JP-11,12 Apr 2025,,,,1
+40,6061,species,长嘴半蹼鹬 (长嘴鹬),Limnodromus scolopaceus,2,,JP-11,12 Apr 2025,,,,1
+37,6356,spuh,未识别的鸻鹬类,Charadriiformes sp. (shorebird sp.),1,,JP-13,27 Apr 2025,,,,0
+36,6720,species,须浮鸥,Chlidonias hybrida,1,,JP-11,03 May 2025,,,,1
+35,24874,species,冕柳莺,Phylloscopus coronatus,1,,JP-13,04 May 2025,,,,1
+33,24938,species,库页岛柳莺,Phylloscopus borealoides,1,,JP-13,05 May 2025,,,,1
+34,6748,species,普通燕鸥,Sterna hirundo,1,,JP-13,05 May 2025,,,,1
+32,3432,species,小杜鹃,Cuculus poliocephalus,1,,JP-13,25 May 2025,,,,1
+31,7586,species,黄苇鳽,Botaurus sinensis,1,,JP-11,01 Jun 2025,,,,1
+28,21466,species,喜鹊,Pica serica,10,,CN-21,19 Sep 2025,,,,1
+29,11349,species,大斑啄木鸟,Dendrocopos major,1,,CN-21,19 Sep 2025,,,,1
+30,6728,species,白翅浮鸥,Chlidonias leucopterus,2,,CN-21,19 Sep 2025,,,,1
+27,24804,species,黄眉柳莺,Phylloscopus inornatus,3,,CN-21,20 Sep 2025,,,,1
+26,7579,species,紫背苇鳽,Botaurus eurhythmus,1,,CN-21,20 Sep 2025,,,,1
+22,25618,species,红胁绣眼鸟,Zosterops erythropleurus,5,,CN-21,22 Sep 2025,,,,1
+23,22030,species,沼泽山雀,Poecile palustris,1,,CN-21,22 Sep 2025,,,,1
+24,11655,species,灰头绿啄木鸟,Picus canus,1,,CN-21,22 Sep 2025,,,,1
+25,11318,species,棕腹啄木鸟,Dendrocopos hyperythrus,1,,CN-21,22 Sep 2025,,,,1
+20,281,species,鸿雁,Anser cygnoides,10,,CN-21,23 Sep 2025,,,,1
+21,275,species,灰雁,Anser anser,3,,CN-21,23 Sep 2025,,,,1
+19,379,species,黑天鹅,Cygnus atratus,5,,CN-21,23 Sep 2025,,,X,0
+18,762,species,普通秋沙鸭,Mergus merganser,1,,JP-14,28 Sep 2025,,,,1
+17,6042,species,黑尾塍鹬,Limosa limosa,2,,JP-11,12 Oct 2025,,,,1
+16,299,species,小白额雁,Anser erythropus,1,,JP-11,08 Nov 2025,,,,1
+15,517,species,绿眉鸭,Mareca americana,2,,JP-13,09 Nov 2025,,,,1
+14,445,species,疣鼻栖鸭,Cairina moschata,1,,JP-13,30 Dec 2025,,,X,0
+12,5854,species,长嘴剑鸻,Thinornis placidus,3,,JP-13,18 Jan 2026,,,,1
+13,743,species,鹊鸭,Bucephala clangula,3,,JP-13,18 Jan 2026,,,,1
+9,31882,species,黄腹鹨,Anthus japonicus,2,,JP-14,14 Feb 2026,,,,1
+11,287,species,白额雁,Anser albifrons,1,,JP-14,14 Feb 2026,,,,1
+10,683,hybrid,白眼潜鸭x青头潜鸭 (杂交),Aythya nyroca x baeri,1,,JP-14,14 Feb 2026,,,,0
+6,29555,species,红胸姬鹟,Ficedula parva,1,,JP-13,21 Feb 2026,,,,1
+7,6460,species,黑嘴鸥,Saundersilarus saundersi,1,,JP-13,21 Feb 2026,,,,1
+8,737,species,黑海番鸭,Melanitta americana,2,,JP-13,21 Feb 2026,,,,1
+5,18637,species,琉球山椒鸟,Pericrocotus tegimae,1,,JP-13,22 Feb 2026,,,,1
+2,32091,species,锡嘴雀,Coccothraustes coccothraustes,1,,JP-14,01 Mar 2026,,,,1
+3,21339,species,松鸦,Garrulus glandarius,1,,JP-14,01 Mar 2026,,,,1
+4,673,species,环颈潜鸭,Aythya collaris,1,,JP-14,01 Mar 2026,,,,1
+1,28590,species,赤胸鸫,Turdus chrysolaus,1,,JP-13,29 Mar 2026,,,,1
+Row #,Taxon Order,Category,Common Name,Scientific Name,Count,Location,S/P,Date,,,Exotic,Countable
