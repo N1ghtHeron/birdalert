@@ -13,7 +13,8 @@ import requests
 import main
 from zoopicker_client import (
     AdRequiredError, AuthenticationError, Observation, PlaceResult,
-    ZoopickerClient, ZoopickerError, load_locations, parse_records_jp,
+    ZoopickerClient, ZoopickerError, RateLimitError, load_locations, parse_records_jp,
+    retry_after_seconds,
 )
 
 TARGET = "Calidris melanotos"
@@ -56,6 +57,55 @@ def client_with_responses(*responses, authenticated=True, max_pages=99):
 
 
 class AuthenticationTests(unittest.TestCase):
+    @patch("zoopicker_client.time.sleep")
+    def test_bootstrap_429_waits_then_logs_in(self, sleep):
+        client = client_with_responses(response({}, 429), *login_responses())
+        with contextlib.redirect_stdout(io.StringIO()):
+            client.login()
+        self.assertTrue(client.authenticated)
+        self.assertIn(unittest.mock.call(30), sleep.call_args_list)
+        self.assertEqual(client.session.request.call_count, 5)
+
+    @patch("zoopicker_client.time.sleep")
+    def test_persistent_429_is_bounded_and_not_bad_password(self, sleep):
+        client = client_with_responses(*[response({}, 429) for _ in range(3)])
+        with contextlib.redirect_stdout(io.StringIO()), self.assertRaises(RateLimitError) as caught:
+            client.login()
+        self.assertTrue(client.rate_limited)
+        self.assertEqual(client.session.request.call_count, 3)
+        self.assertIn(unittest.mock.call(60), sleep.call_args_list)
+        self.assertNotIn("密码", str(caught.exception))
+
+    @patch("zoopicker_client.time.sleep")
+    def test_retry_after_is_respected_and_long_cooldown_stops(self, sleep):
+        limited = response({}, 429)
+        limited.headers["Retry-After"] = "45"
+        client = client_with_responses(limited, response({"ok": True}))
+        with contextlib.redirect_stdout(io.StringIO()):
+            client._request("GET", "https://zoopicker.com/")
+        self.assertIn(unittest.mock.call(45), sleep.call_args_list)
+        limited.headers["Retry-After"] = "3600"
+        client = client_with_responses(limited)
+        with self.assertRaises(RateLimitError):
+            client._request("GET", "https://zoopicker.com/")
+        self.assertEqual(client.session.request.call_count, 1)
+
+    @patch("zoopicker_client.time.sleep")
+    def test_post_429_is_never_resubmitted(self, sleep):
+        client = client_with_responses(response({}, 429))
+        with self.assertRaises(RateLimitError):
+            client._request("POST", "https://zoopicker.com/api/v1/accounts/firebase_signin")
+        self.assertEqual(client.session.request.call_count, 1)
+        sleep.assert_not_called()
+
+    def test_retry_after_formats(self):
+        from email.utils import format_datetime
+        future = dt.datetime.now(dt.timezone.utc) + dt.timedelta(seconds=60)
+        seconds = retry_after_seconds(format_datetime(future))
+        self.assertTrue(58 <= seconds <= 60)
+        for value in (None, "invalid", "NaN", "Infinity"):
+            self.assertIsNone(retry_after_seconds(value))
+
     def test_normal_login_verifies_server_session(self):
         client = client_with_responses(*login_responses(), authenticated=False)
         client.login()
@@ -219,7 +269,8 @@ class HtmlAndReportTests(unittest.TestCase):
         client.fetch_place.return_value = PlaceResult(
             [Observation(dt.date(2026, 10, 28), "アメリカウズラシギ", TARGET)],
             pages=1, fetched_count=100, warning="需要观看广告")
-        with patch.object(main.ZoopickerClient, "from_env") as factory, \
+        with patch.object(main, "load_library", return_value=set()), \
+                patch.object(main.ZoopickerClient, "from_env") as factory, \
                 contextlib.redirect_stdout(io.StringIO()):
             factory.return_value.__enter__.return_value = client
             report = main.generate_markdown(zoopicker_only=True, place_ids=[767], today=dt.date(2026, 10, 29))
@@ -240,7 +291,8 @@ class HtmlAndReportTests(unittest.TestCase):
         client.authenticated = True
         client.fetch_place.return_value = PlaceResult(
             [Observation(dt.date(2026, 10, 28), "アメリカウズラシギ", TARGET)], pages=1)
-        with patch.object(main.ZoopickerClient, "from_env") as factory, \
+        with patch.object(main, "load_library", return_value=set()), \
+                patch.object(main.ZoopickerClient, "from_env") as factory, \
                 patch.object(main, "fetch_ebird_data", side_effect=ValueError("eBird 请求失败")), \
                 contextlib.redirect_stdout(io.StringIO()):
             factory.return_value.__enter__.return_value = client

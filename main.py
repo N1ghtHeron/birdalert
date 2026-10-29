@@ -241,6 +241,9 @@ def generate_markdown(*, zoopicker_only=False, place_ids=None, days=num_days, to
                     aggregated[out_date][sci]["total"] += 1
                     key = (loc["location"], "zoopicker", loc["place_url"])
                     aggregated[out_date][sci]["locations"][key] = aggregated[out_date][sci]["locations"].get(key, 0) + 1
+                if client.rate_limited is True:
+                    warnings.append("Zoopicker 持续限流，剩余地点未处理。")
+                    break
                 if not client.authenticated:
                     warnings.append("Zoopicker 登录无法恢复，剩余地点未完成抓取。")
                     break

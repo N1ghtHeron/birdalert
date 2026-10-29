@@ -10,6 +10,8 @@ import json
 import os
 import re
 import time
+import math
+from email.utils import parsedate_to_datetime
 from dataclasses import dataclass, field
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -40,6 +42,25 @@ class AuthenticationError(ZoopickerError):
 
 class AdRequiredError(ZoopickerError):
     pass
+
+
+class RateLimitError(ZoopickerError):
+    pass
+
+
+def retry_after_seconds(value):
+    """Accept either Retry-After seconds or an HTTP date; ignore invalid values."""
+    try:
+        seconds = float(value)
+        return max(0, seconds) if math.isfinite(seconds) else None
+    except (ValueError, TypeError):
+        try:
+            when = parsedate_to_datetime(value)
+            if when.tzinfo is None:
+                when = when.replace(tzinfo=dt.timezone.utc)
+            return max(0, (when - dt.datetime.now(dt.timezone.utc)).total_seconds())
+        except (ValueError, TypeError, OverflowError):
+            return None
 
 
 def check_ad_gate(text):
@@ -111,7 +132,7 @@ def parse_records_jp(html, target_date_mapping):
 
 
 class ZoopickerClient:
-    def __init__(self, email, password, *, session=None, delay=1.0, max_pages=99):
+    def __init__(self, email, password, *, session=None, delay=2.0, max_pages=99):
         if not email or not password:
             raise AuthenticationError("请配置 ZOOPICKER_EMAIL 和 ZOOPICKER_PASSWORD。")
         self._email = email
@@ -120,6 +141,7 @@ class ZoopickerClient:
         self.delay = delay
         self.max_pages = max_pages
         self.authenticated = False
+        self.rate_limited = False
         self._last_get = None
         self.session.headers.update({
             "User-Agent": "Mozilla/5.0 (compatible; birdalert personal bird alerts)",
@@ -127,8 +149,11 @@ class ZoopickerClient:
             "Accept-Language": "ja",
         })
         # Only idempotent GETs are retried. Never retry password submissions.
-        retry = Retry(total=2, backoff_factor=1, status_forcelist=(429, 500, 502, 503, 504),
-                      allowed_methods=frozenset({"GET"}), raise_on_status=False)
+        # 429 is handled explicitly below, with slower, bounded waits. Disable
+        # urllib3's implicit Retry-After handling to avoid two retry loops.
+        retry = Retry(total=2, backoff_factor=1, status_forcelist=(500, 502, 503, 504),
+                      allowed_methods=frozenset({"GET"}), raise_on_status=False,
+                      respect_retry_after_header=False)
         self.session.mount("https://", HTTPAdapter(max_retries=retry))
 
     @classmethod
@@ -151,15 +176,30 @@ class ZoopickerClient:
         self.authenticated = False
 
     def _request(self, method, url, **kwargs):
-        if method == "GET":
-            if self._last_get is not None:
-                time.sleep(max(0, self.delay - (time.monotonic() - self._last_get)))
-            self._last_get = time.monotonic()
-        try:
-            return self.session.request(method, url, timeout=TIMEOUT, **kwargs)
-        except requests.RequestException:
-            # Requests errors may include URLs/query strings. Do not propagate them.
-            raise ZoopickerError("网络请求失败或超时。") from None
+        for attempt in range(3):
+            if method == "GET":
+                if self._last_get is not None:
+                    time.sleep(max(0, self.delay - (time.monotonic() - self._last_get)))
+                self._last_get = time.monotonic()
+            try:
+                response = self.session.request(method, url, timeout=TIMEOUT, **kwargs)
+            except requests.RequestException:
+                # Requests errors may include URLs/query strings. Do not propagate them.
+                raise ZoopickerError("网络请求失败或超时。") from None
+            if response.status_code != 429:
+                return response
+            wait = retry_after_seconds(response.headers.get("Retry-After"))
+            wait = wait if wait is not None else 30 * (2 ** attempt)
+            # Never repeat credential submissions, or retry before a server's
+            # long cooldown has elapsed. End this run instead of hammering it.
+            if method != "GET" or attempt == 2 or wait > 120:
+                self.rate_limited = True
+                raise RateLimitError(
+                    "网站限流（HTTP 429），本轮已停止 Zoopicker 请求。"
+                    "请稍后重试；GitHub Actions 的共享出口 IP 也可能受到限流。"
+                )
+            print(f"Zoopicker 返回 HTTP 429，等待 {math.ceil(wait)} 秒后重试（{attempt + 1}/2）。")
+            time.sleep(wait)
 
     @staticmethod
     def _json(response):
