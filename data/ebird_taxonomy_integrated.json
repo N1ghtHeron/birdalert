@@ -331514,6 +331514,28 @@
     "comName_ja": "オオジュリン"
   },
   {
+    "sciName": "Schoeniclus schoeniclus",
+    "comName": "Reed Bunting",
+    "speciesCode": "reebun",
+    "category": "species",
+    "taxonOrder": 32524.0,
+    "bandingCodes": [
+      "REBU"
+    ],
+    "comNameCodes": [
+      "CRBU"
+    ],
+    "sciNameCodes": [
+      "EMSC"
+    ],
+    "order": "Passeriformes",
+    "familyCode": "emberi2",
+    "familyComName": "Old World Buntings",
+    "familySciName": "Emberizidae",
+    "comName_zh_SIM": "芦鹀",
+    "comName_ja": "オオジュリン"
+  },
+  {
     "sciName": "Emberiza pallasi/schoeniclus",
     "comName": "Pallas's/Reed Bunting",
     "speciesCode": "y01015",
@@ -331623,6 +331645,26 @@
   },
   {
     "sciName": "Emberiza spodocephala",
+    "comName": "Black-faced Bunting",
+    "speciesCode": "bkfbun1",
+    "category": "species",
+    "taxonOrder": 32553.0,
+    "bandingCodes": [],
+    "comNameCodes": [
+      "BFBU"
+    ],
+    "sciNameCodes": [
+      "EMSP"
+    ],
+    "order": "Passeriformes",
+    "familyCode": "emberi2",
+    "familyComName": "Old World Buntings",
+    "familySciName": "Emberizidae",
+    "comName_zh_SIM": "灰头鹀",
+    "comName_ja": "シベリアアオジ"
+  },
+  {
+    "sciName": "Schoeniclus personatus",
     "comName": "Black-faced Bunting",
     "speciesCode": "bkfbun1",
     "category": "species",

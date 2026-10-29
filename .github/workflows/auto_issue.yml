@@ -18,6 +18,8 @@ jobs:
       EBIRD_API_KEY: ${{ secrets.EBIRD_API_KEY }}
       LAT: ${{ secrets.LAT }}
       LNG: ${{ secrets.LNG }}
+      ZOOPICKER_EMAIL: ${{ secrets.ZOOPICKER_EMAIL }}
+      ZOOPICKER_PASSWORD: ${{ secrets.ZOOPICKER_PASSWORD }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3

@@ -11,21 +11,20 @@ import os
 import argparse
 import datetime
 import requests
-from bs4 import BeautifulSoup
 import csv
 from datetime import timedelta
 from github import Github
 import json
 import time  # 引入time用于API请求间隔，避免速率限制
+from dotenv import load_dotenv
+from zoopicker_client import (
+    BASE_DIR, JST, TIMEOUT, ZoopickerClient, ZoopickerError,
+    load_locations, parse_records_jp,
+)
 
-# TODO：----------------------- local debug ----------------------------
-# from dotenv import load_dotenv
-# load_dotenv()
+load_dotenv(BASE_DIR / ".env")  # Existing environment variables take precedence.
 # ----------------------- 全局配置 ----------------------------
 num_days = 3  # 最近几天数据
-ebird_token = os.getenv("EBIRD_API_KEY")  # eBird API Token
-lat = float(os.getenv("LAT"))  # center location
-lng = float(os.getenv("LNG"))
 dist = 40  # radius distance (km)
 lang = "zh_SIM"
 
@@ -45,48 +44,13 @@ def format_date(date_str):
     return f"{d.strftime('%Y-%m-%d')} ({week[d.weekday()]})"
 
 
-def get_target_dates(num_days=num_days):
+def get_target_dates(num_days=num_days, today=None):
     dates = set()
-    today = datetime.datetime.now()
+    today = today or datetime.datetime.now(JST).date()
     for i in range(num_days):
         d = today - timedelta(days=i)
-        dates.add(d.date())
+        dates.add(d)
     return dates
-
-
-def fetch_page(url):
-    """获取指定 URL 页面的 HTML 内容"""
-    headers = {
-        "User-Agent": (
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-            "AppleWebKit/537.36 (KHTML, like Gecko) "
-            "Chrome/105.0.0.0 Safari/537.36"
-        )
-    }
-    response = requests.get(url, headers=headers)
-    response.raise_for_status()
-    return response.text
-
-
-def parse_records_jp(html, target_date_mapping):
-    """
-    解析 zoopicker 日语页面中的记录，
-    返回按页面中日期（target_date_mapping 的 key）分组的记录字典
-    """
-    soup = BeautifulSoup(html, "html.parser")
-    text = soup.get_text("\n")
-    lines = [line.strip() for line in text.splitlines() if line.strip()]
-    records_by_date = {}
-    for i, line in enumerate(lines):
-        if line in target_date_mapping:
-            if i >= 2:
-                observed_jp = lines[i - 2]
-                mid = lines[i - 1]
-                parts = mid.split("/")
-                sci = parts[1].strip() if len(parts) > 1 else ""
-                rec = {"observed_jp": observed_jp, "scientific": sci}
-                records_by_date.setdefault(line, []).append(rec)
-    return records_by_date
 
 
 def load_library(csv_file):
@@ -118,42 +82,32 @@ def load_mapping(json_file):
     return mapping
 
 
-def load_locations(csv_file):
-    """加载观鸟地点列表 CSV，每条记录包含页面 URL 和地点名称"""
-    locs = []
-    with open(csv_file, newline='', encoding='utf-8') as f:
-        reader = csv.reader(f)
-        for row in reader:
-            if not row or all(not c.strip() for c in row):
-                continue
-            pid = row[0].strip()
-            try:
-                int(pid)
-            except ValueError:
-                continue
-            locs.append({
-                "url": f"https://zoopicker.com/places/{pid}/watcheds",
-                "place_url": f"https://zoopicker.com/places/{pid}",
-                "location": row[1].strip() if len(row) > 1 else ""
-            })
-    return locs
-
-
 # ----------------------- eBird 数据获取函数 (修改版) ----------------------------
-def fetch_ebird_data(library_set):
+def fetch_ebird_data(library_set, days=num_days, today=None, warnings=None):
     """
     1. 获取区域内所有近期出现的鸟种。
     2. 筛选出不在 library_set (Life List) 中的目标鸟种。
     3. 针对每个目标鸟种，调用 specific species 接口获取所有记录。
     """
-    headers = {'X-eBirdApiToken': ebird_token}
+    warnings = warnings if warnings is not None else []
+    token = os.getenv("EBIRD_API_KEY")
+    if not token:
+        raise ValueError("eBird 缺少 EBIRD_API_KEY。")
+    try:
+        lat = float(os.getenv("LAT", ""))
+        lng = float(os.getenv("LNG", ""))
+    except ValueError:
+        raise ValueError("请填写有效的 LAT（纬度）和 LNG（经度）。") from None
+    if not (-90 <= lat <= 90 and -180 <= lng <= 180):
+        raise ValueError("LAT 或 LNG 超出有效范围。")
+    headers = {'X-eBirdApiToken': token}
 
     # 步骤 1: 获取概览，找出有哪些鸟
     # 使用 requests 替代 http.client，处理参数更方便
     params_overview = {
         'lat': lat,
         'lng': lng,
-        'back': num_days,
+        'back': days,
         'dist': dist,
         'hotspot': 'true',
         'sppLocale': lang
@@ -161,12 +115,13 @@ def fetch_ebird_data(library_set):
 
     try:
         print("正在获取 eBird 区域概览数据...")
-        resp = requests.get(base_url, headers=headers, params=params_overview)
+        resp = requests.get(base_url, headers=headers, params=params_overview, timeout=TIMEOUT)
         resp.raise_for_status()
         overview_list = resp.json()
-    except Exception as e:
-        print(f"eBird 概览请求失败: {e}")
-        return {}
+    except (requests.RequestException, ValueError):
+        raise ValueError("eBird 概览请求失败或响应无效。") from None
+    if not isinstance(overview_list, list):
+        raise ValueError("eBird 概览响应结构变化。")
 
     # 步骤 2: 筛选出目标鸟种的代码 (speciesCode)
     target_species_codes = set()
@@ -182,7 +137,7 @@ def fetch_ebird_data(library_set):
 
     # 步骤 3: 针对每个目标鸟种获取详细记录并聚合
     aggregated = {}
-    target_dates = get_target_dates()
+    target_dates = get_target_dates(days, today)
 
     for idx, code in enumerate(target_species_codes):
         # 简单限流，防止请求过快 (可选)
@@ -192,13 +147,15 @@ def fetch_ebird_data(library_set):
         species_url = f"{base_url}/{code}"
         # 参数与概览相同，但针对特定物种会返回列表
         try:
-            r = requests.get(species_url, headers=headers, params=params_overview)
+            r = requests.get(species_url, headers=headers, params=params_overview, timeout=TIMEOUT)
             if r.status_code != 200:
-                print(f"获取物种 {code} 失败: {r.status_code}")
+                warnings.append(f"eBird 物种 {code} 请求失败（HTTP {r.status_code}）。")
                 continue
             observations = r.json()
-        except Exception as e:
-            print(f"请求物种 {code} 出错: {e}")
+            if not isinstance(observations, list):
+                raise ValueError("invalid observations")
+        except (requests.RequestException, ValueError):
+            warnings.append(f"eBird 物种 {code} 请求失败或响应无效。")
             continue
 
         # 处理该物种的所有记录
@@ -237,55 +194,67 @@ def fetch_ebird_data(library_set):
 
 
 # ----------------------- 报告聚合与生成 ----------------------------
-def generate_markdown():
+def generate_markdown(*, zoopicker_only=False, place_ids=None, days=num_days, today=None):
     # 定义文件路径（请根据实际情况修改）
-    location_csv = "data/spot_zoopicker.csv"
-    library_csv = "data/ebird_world_life_list.csv"
-    mapping_json = "data/ebird_taxonomy_integrated.json"
-
-    # 构造 zoopicker 页面中日期映射
-    target_map = {}
-    today = datetime.datetime.now()
-    jp_week_map = {0: "月", 1: "火", 2: "水", 3: "木", 4: "金", 5: "土", 6: "日"}
-    cn_week_map = get_cn_week_map()
-    for i in range(num_days):
-        d = today - timedelta(days=i)
-        jp_key = f"{d.year}年{d.month}月{d.day}日({jp_week_map[d.weekday()]})に観察"
-        cn_key = f"{d.strftime('%Y-%m-%d')} ({cn_week_map[d.weekday()]})"
-        target_map[jp_key] = cn_key
+    if days < 1:
+        raise ValueError("days 必须大于 0。")
+    location_csv = BASE_DIR / "data/spot_zoopicker.csv"
+    library_csv = BASE_DIR / "data/ebird_world_life_list.csv"
+    mapping_json = BASE_DIR / "data/ebird_taxonomy_integrated.json"
+    target_dates = get_target_dates(days, today)
 
     library = load_library(library_csv)
     name_map = load_mapping(mapping_json)
     locations = load_locations(location_csv)
+    if place_ids is not None:
+        known = {loc["id"] for loc in locations}
+        unknown = set(place_ids) - known
+        if unknown:
+            raise ValueError(f"地点不在配置列表中：{', '.join(map(str, sorted(unknown)))}")
+        locations = [loc for loc in locations if loc["id"] in place_ids]
 
     aggregated = {}  # 聚合来自 zoopicker & eBird 两种数据
 
-    # 聚合 zoopicker 数据
-    # ... (zoopicker 代码部分保持不变) ...
-    for loc in locations:
-        try:
-            html = fetch_page(loc["url"])
-        except Exception as e:
-            print(f"获取 {loc['location']} 页面失败：{e}")
-            continue
-        recs = parse_records_jp(html, target_map)
-        for jp_date, rec_list in recs.items():
-            out_date = target_map[jp_date]
-            for rec in rec_list:
-                sci = rec["scientific"]
-                if not sci or sci in library:
-                    continue
-                if out_date not in aggregated:
-                    aggregated[out_date] = {}
-                if sci not in aggregated[out_date]:
-                    aggregated[out_date][sci] = {"total": 0, "locations": {}}
-                aggregated[out_date][sci]["total"] += 1
-                key = (loc["location"], "zoopicker", loc["place_url"])
-                aggregated[out_date][sci]["locations"][key] = aggregated[out_date][sci]["locations"].get(key, 0) + 1
+    warnings = []
+    completed = 0
+    try:
+        with ZoopickerClient.from_env() as client:
+            print("Zoopicker 登录已验证。")
+            for loc in locations:
+                result = client.fetch_place(loc["id"], target_dates)
+                if result.warning:
+                    warnings.append(f"Zoopicker {loc['location']}：{result.warning}")
+                else:
+                    completed += 1
+                print(f"Zoopicker {loc['location']}：{result.pages} 页，"
+                      f"{result.fetched_count} 条原始记录，{len(result.records)} 条在日期范围内，"
+                      f"{'不完整' if result.warning else '完成'}。")
+                for rec in result.records:
+                    sci = rec.scientific
+                    if sci in library:
+                        continue
+                    out_date = format_date(rec.date.isoformat())
+                    if out_date not in aggregated:
+                        aggregated[out_date] = {}
+                    if sci not in aggregated[out_date]:
+                        aggregated[out_date][sci] = {"total": 0, "locations": {}}
+                    aggregated[out_date][sci]["total"] += 1
+                    key = (loc["location"], "zoopicker", loc["place_url"])
+                    aggregated[out_date][sci]["locations"][key] = aggregated[out_date][sci]["locations"].get(key, 0) + 1
+                if not client.authenticated:
+                    warnings.append("Zoopicker 登录无法恢复，剩余地点未完成抓取。")
+                    break
+    except ZoopickerError as error:
+        warnings.append(f"Zoopicker：{error}")
 
     # 聚合 eBird 数据（修改点：传入 library 用于内部筛选和二次查询）
     # 注意：fetch_ebird_data 现在只返回 library 中不存在的物种数据，所以不需要在外层再判断 `if sci in library`
-    ebird_data = fetch_ebird_data(library)
+    ebird_data = {}
+    if not zoopicker_only:
+        try:
+            ebird_data = fetch_ebird_data(library, days, today, warnings)
+        except ValueError as error:
+            warnings.append(str(error))
 
     for date_key, species_data in ebird_data.items():
         if date_key not in aggregated:
@@ -300,9 +269,14 @@ def generate_markdown():
                 aggregated[date_key][sci]["locations"][key] = aggregated[date_key][sci]["locations"].get(key, 0) + cnt
 
     # 构建 Markdown 内容
-    lines = [f"# 最近{num_days}天观测到但未收录的鸟种："]
+    lines = [f"# 最近{days}天观测到但未收录的鸟种："]
+    lines.append(f"\nZoopicker：{completed}/{len(locations)} 个地点完成日期范围抓取。")
+    if warnings:
+        lines.append("\n> ⚠️ 数据不完整，以下结果仅涵盖成功取得的记录。")
+        lines.extend(f"> - {warning}" for warning in warnings)
     if not aggregated:
-        lines.append("无新增鸟种记录。")
+        lines.append("\n在已取得的数据中未发现新增鸟种；部分数据未完成，不能据此判断没有新增记录。"
+                     if warnings else "\n无新增鸟种记录。")
     else:
         for date_key in sorted(aggregated.keys(), reverse=True):
             lines.append(f"\n## {date_key}")
@@ -330,7 +304,7 @@ def generate_markdown():
 
 
 def write_markdown_to_file(text, date_str):
-    export_dir = "export"
+    export_dir = BASE_DIR / "export"
     os.makedirs(export_dir, exist_ok=True)
     path = os.path.join(export_dir, f"{date_str}.md")
     with open(path, "w", encoding="utf-8") as f:
@@ -355,27 +329,37 @@ def create_github_issue(body, date_str):
 
 
 # ----------------------- Main ----------------------------
-if __name__ == "__main__":
+def run_cli(zoopicker_only=False):
     parser = argparse.ArgumentParser()
-    parser.add_argument("--mode", choices=["generate", "create-issue"], required=True,
+    parser.add_argument("--mode", choices=["generate", "create-issue"], default="generate",
                         help="运行模式")
 
-    # TODO：----------------------- local debug 则改成 ----------------------------
-    # parser.add_argument("--mode", choices=["generate", "create-issue"],
-    #                     default="generate",  # 设置默认模式
-    #                     help="运行模式: generate(生成 Markdown), create-issue(根据 Markdown 创建 GitHub Issue)")
+    parser.add_argument("--zoopicker-only", action="store_true", default=zoopicker_only,
+                        help="只抓取 Zoopicker，不请求 eBird")
+    parser.add_argument("--places", type=int, nargs="+", help="只抓取指定地点 ID，例如 767")
+    parser.add_argument("--days", type=int, default=num_days, help="最近几天，按日本时区计算")
 
     args = parser.parse_args()
-    date_str = datetime.datetime.utcnow().strftime("%Y-%m-%d")
+    if not 1 <= args.days <= 30:
+        parser.error("--days 必须在 1 到 30 之间")
+    date_str = datetime.datetime.now(JST).strftime("%Y-%m-%d")
     if args.mode == "generate":
-        md = generate_markdown()
+        try:
+            md = generate_markdown(zoopicker_only=args.zoopicker_only,
+                                   place_ids=args.places, days=args.days)
+        except ValueError as error:
+            parser.error(str(error))
         write_markdown_to_file(md, date_str)
         print(md)
     elif args.mode == "create-issue":
-        path = os.path.join("export", f"{date_str}.md")
+        path = BASE_DIR / "export" / f"{date_str}.md"
         if not os.path.isfile(path):
             print(f"Error: 找不到 Markdown 文件 {path}，请先运行 --mode generate。")
         else:
             with open(path, encoding="utf-8") as f:
                 body = f.read()
             create_github_issue(body, date_str)
+
+
+if __name__ == "__main__":
+    run_cli()
